@@ -31,12 +31,33 @@
 - 发布原则：线上只展示允许公开的报告、来源摘要和资料包；Webhook、Token、Cookie、供应商密钥、付费数据原件和本机绝对路径不得进入网站。
 - 更新原则：网站只建设一次；后续运行向同一网站新增报告和资料包，不为每轮选品重复创建网址。
 
+### 后端与部署边界
+
+Cloudflare / Sites 不只是静态网页托管。本项目当前通过 Cloudflare Worker 运行页面和服务端 API，使用 D1 读写报告、候选和任务状态，并在服务端执行身份校验和飞书推送。现有接口包括 `GET/POST /api/reports`、`POST /api/selection-requests` 和 `POST /api/reports/:id/feishu`。
+
+Cloudflare 适合承载 HTTP API、D1 数据库、R2 文件、Secrets、Cron、Queues 和 Workflows；它不提供常驻 Node 进程，也不适合直接运行本地模型、Docker 服务或长时间 Playwright 浏览器任务。选品任务必须由 Queue/Workflow 异步执行，不能在页面请求中同步等待。
+
+当前 `/api/selection-requests` 已能把请求写入 D1 并返回 `queued`；`scripts/selection-worker.mjs` 可以领取任务，但如果没有配置 `SELECTION_RESEARCH_ADAPTER_URL`，它只能完成领取，不能自行完成研究。执行任务时必须继续检查适配器、运行产物和任务回写；如果适配器缺失，应明确使用项目内的 inline fallback（或保持 `processing/blocked`），不能把“已领取”说成“已执行”。只有报告产物、网站入库和业务回执都读回后，才可标记为完成或已发布。
+
+最近一次已执行任务：`2026-11-13-us-googleplay-puzzle`，任务请求为美国 Google Play Puzzle 榜单、增长较快且评价较好的游戏，输出 3 个候选。产物位于 [`outputs/scouting/2026-11-13-us-googleplay-puzzle/`](outputs/scouting/2026-11-13-us-googleplay-puzzle/)。该次执行采用 inline fallback，已回写任务 `completed`；网站报告入库和飞书推送仍需单独完成并核对回执。
+
+内部使用部署按 [部署规范 V1.0](docs/部署规范V1.0.md) 执行；默认不购买独立 VPS。只有需要常驻 Agent、浏览器集群、本地模型或 Docker 服务时，才单独增加后台执行器，Web 和 D1 仍可继续运行在 Cloudflare。
+
 当前已经上线的两份按需专项调查：
 
 - [抖省省竞品、相邻产品与替代方案调查](https://app-selection-hub.xiaojie-april.chatgpt.site/reports/2026-07-26-china-doushengsheng-competitor-map)：发现 10 个机会，深度研究 3 个；当前正式入选 0 个，全部保持 `WATCH`。
 - [美团、抖音、淘宝多平台优惠返利调查](https://app-selection-hub.xiaojie-april.chatgpt.site/reports/2026-07-26-china-multi-platform-local-deals-rebate)：核验 10 个现有竞品，深度研究 3 个方向；平台授权和真实订单结算验证完成前，正式入选 0 个。
 
 专项调查与周期选品共用同一个报告库、选品总表和公开详情页。`WATCH` 项可以展示证据、参考 App、少而精的改进方向和下一步验证要求，但不会生成生产资料包，也不会被写成正式立项。
+
+## 当前设计参考标准
+
+综合选品数据看板第三版已经确定为后续网站设计与实现的主参考标准：
+
+- [综合机会地图第三版设计稿](design/portfolio-dashboard-opportunity-map-v3-2026-11-11.png)
+- [设计系统与界面参考标准](docs/设计系统与界面参考标准-2026-11-11.md)
+
+后续页面统一采用深夜蓝侧栏、暖象牙工作区、四类机会语义色、中央机会分布地图、右侧风险与下一步动作、底部队列/时间线的结构。机会详情、证据链、项目管理、开发发布和 Agent 运行页面都必须沿用同一套状态、颜色、数据新鲜度、负责人和回执规则。
 
 ## 当前交付物
 
@@ -112,6 +133,12 @@ Loop 是控制面，不拥有路线评分；Skill 是能力面，既可以被 Lo
 - Engine C：至少 3 个独立领先信号，加用户行为、替代方案或实验验证。
 
 三条路线的评分含义、证据门槛和排名范围都不同，不做跨路线总分、统一榜单或相互淘汰。开发台产能只决定何时开工，不改变每条路线的选品结果。
+
+### 选品与竞品的对应规则
+
+每个候选必须有一个唯一的 `primary_competitor`，表示“我们这一个选品主要对应、拆解并准备超越的产品”，候选与它保持 1-1 关系。其他可借鉴产品放入 `reference_objects`，并标注它们学习的是玩法、增长、商业化、分发或其他维度。报告、网站、候选详情、资料包和飞书卡片必须把两类对象分开显示；禁止把一组通用竞品数组复制给所有候选。
+
+若主对应竞品缺失、重复映射或与候选核心任务不匹配，候选只能停在 `REVIEW/BLOCKED`，不能进入 `SELECTED/READY_FOR_BENCH`。历史数据无法可靠拆分时保留 `insufficient_data`，不擅自补值。完整修改方案和验收条件见 [技术路线中的 1-1 竞品映射待办](docs/roadmap-technical-2026-11-11.md#待办修复选品与竞品的-1-1-对应关系)。
 
 默认研究产量：
 
