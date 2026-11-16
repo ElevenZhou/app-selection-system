@@ -75,7 +75,22 @@
                 "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
                 "store": { "enum": ["apple_app_store", "google_play", null] },
                 "storeUrl": { "type": ["string", "null"], "format": "uri", "pattern": "^https?://" },
-                "relation": { "enum": ["competitor", "similar", "substitute"] }
+                "relation": { "enum": ["competitor", "similar", "substitute"] },
+                "apkDownloads": {
+                  "type": "array",
+                  "maxItems": 3,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["provider", "label", "url", "status"],
+                    "properties": {
+                      "provider": { "enum": ["apkmirror", "uptodown", "f_droid", "amazon_appstore", "aurora_store", "aptoide", "apkpure", "other"] },
+                      "label": { "type": "string", "minLength": 1 },
+                      "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+                      "status": { "enum": ["verified", "needs_verification"] }
+                    }
+                  }
+                }
               }
             }
           },

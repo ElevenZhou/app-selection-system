@@ -74,7 +74,8 @@ export default async function ReportDetail({ params }: { params: Promise<{ id: s
                   <span className="candidate-rank">{String(item.routeRank).padStart(2, "0")}</span>
                   <ProductIcon iconUrl={item.iconUrl} route={item.route} title={item.title} />
                   <div>
-                    <a className="product-title-link" href={item.references.find((reference) => reference.storeUrl)?.storeUrl ?? item.references[0]?.url} target="_blank" rel="noreferrer">{bilingualName(item.title, item.titleZh)}</a>
+                    <span className="product-title-link" aria-label="机会概念，尚无商店页面">{bilingualName(item.title, item.titleZh)}</span>
+                    <small className="candidate-status-note">机会概念 · 尚未上架 App Store / Google Play</small>
                     <ProductFormBadge form={item.productForm} />
                     <small>{item.category} · {item.market}</small>
                     <ReferenceLinks references={item.references} />

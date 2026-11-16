@@ -98,16 +98,20 @@ export function buildFeishuCard(report: Report, candidates: Candidate[], origin:
     const lines = [`**${group.title}**`];
     for (const [index, candidate] of group.candidates.entries()) {
       const references = candidate.references
-        .map((reference) => ({
-          ...reference,
-          targetUrl: reference.storeUrl ?? reference.url,
-          destination: referenceKindLabel(reference.kind),
-        }))
-        .filter((reference) => /^https?:\/\//.test(reference.targetUrl))
-        .map((reference) => markdownLink(
-          `${bilingualName(reference.name, reference.nameZh)} · ${reference.destination}`,
-          reference.targetUrl,
-        ))
+        .map((reference) => {
+          const targetUrl = reference.storeUrl ?? reference.url;
+          const apk = (reference.apkDownloads ?? [])
+            .slice(0, 2)
+            .filter((download) => /^https:\/\//.test(download.url))
+            .map((download) => markdownLink(`APK · ${download.label}`, download.url))
+            .join("、");
+          return { reference, targetUrl, apk };
+        })
+        .filter(({ targetUrl }) => /^https?:\/\//.test(targetUrl))
+        .map(({ reference, targetUrl, apk }) => `${markdownLink(
+          `${bilingualName(reference.name, reference.nameZh)} · ${referenceKindLabel(reference.kind)}`,
+          targetUrl,
+        )}${apk ? `（${apk}）` : ""}`)
         .join(" · ");
       const candidateName = bilingualName(candidate.title, candidate.titleZh);
       if (!references) throw new Error(`${candidateName} 缺少可点击的参考品`);

@@ -8,6 +8,8 @@ import type {
   Report,
   ReportPayload,
   RouteId,
+  DashboardMetrics,
+  DashboardTaskSummary,
 } from "./types";
 
 let schemaReady = false;
@@ -190,7 +192,27 @@ export async function getDashboard() {
   const reports = await listReports();
   const latest = reports.find((report) => report.status !== "research");
   const data = latest ? await getReport(latest.id) : null;
-  return { reports, latest, candidates: data?.candidates ?? [] };
+  const candidates = data?.candidates ?? [];
+  const metrics: DashboardMetrics = {
+    reportCount: reports.length,
+    selectedCount: candidates.filter((item) => item.decision === "ROUTE_SELECTED").length,
+    backupCount: candidates.filter((item) => item.decision === "ROUTE_BACKUP").length,
+    watchCount: candidates.filter((item) => item.decision === "ROUTE_WATCH").length,
+    packageReadyCount: candidates.filter((item) => item.packageStatus === "READY_FOR_BENCH").length,
+    averageCompleteness: candidates.length ? Math.round(candidates.reduce((sum, item) => sum + item.dataCompleteness, 0) / candidates.length * 100) / 100 : null,
+    latestCollectedAt: latest?.publishedAt ?? null,
+  };
+  const taskSummary: DashboardTaskSummary = { queued: 0, processing: 0, completed: 0, failed: 0, total: 0 };
+  try {
+    const rows = await getDatabase().prepare("SELECT status, COUNT(*) AS count FROM selection_requests GROUP BY status").all<{ status: string; count: number }>();
+    for (const row of rows.results) {
+      if (row.status === "queued" || row.status === "processing" || row.status === "completed" || row.status === "failed") taskSummary[row.status] = Number(row.count);
+    }
+    taskSummary.total = taskSummary.queued + taskSummary.processing + taskSummary.completed + taskSummary.failed;
+  } catch {
+    // Older deployments may not have the optional task queue yet.
+  }
+  return { reports, latest, candidates, metrics, taskSummary };
 }
 
 export async function listCandidateArchive(filters: CandidateArchiveFilters = {}): Promise<CandidateArchiveEntry[]> {
@@ -357,7 +379,27 @@ function validateReferences(value: unknown, index: number): AppReference[] {
       store: validateStore(item.store, `candidates[${index}].references[${referenceIndex}].store`),
       storeUrl: optionalUrl(item.storeUrl, `candidates[${index}].references[${referenceIndex}].storeUrl`),
       relation,
+      apkDownloads: validateApkDownloads(item.apkDownloads, index, referenceIndex),
     };
+  });
+}
+
+function validateApkDownloads(value: unknown, candidateIndex: number, referenceIndex: number) {
+  if (value === undefined || value === null) return [];
+  if (!Array.isArray(value) || value.length > 3) {
+    throw new Error(`candidates[${candidateIndex}].references[${referenceIndex}].apkDownloads最多包含3个链接`);
+  }
+  const providers = ["apkmirror", "uptodown", "f_droid", "amazon_appstore", "aurora_store", "aptoide", "apkpure", "other"] as const;
+  return value.map((raw, downloadIndex) => {
+    if (!raw || typeof raw !== "object") throw new Error(`candidates[${candidateIndex}].references[${referenceIndex}].apkDownloads[${downloadIndex}]无效`);
+    const item = raw as Record<string, unknown>;
+    const provider = item.provider as (typeof providers)[number];
+    if (!providers.includes(provider)) throw new Error(`candidates[${candidateIndex}].references[${referenceIndex}].apkDownloads[${downloadIndex}].provider无效`);
+    const status = String(item.status) as "verified" | "needs_verification";
+    if (status !== "verified" && status !== "needs_verification") throw new Error(`candidates[${candidateIndex}].references[${referenceIndex}].apkDownloads[${downloadIndex}].status无效`);
+    const url = requiredUrl(item.url, `candidates[${candidateIndex}].references[${referenceIndex}].apkDownloads[${downloadIndex}].url`);
+    if (!url.startsWith("https://")) throw new Error(`candidates[${candidateIndex}].references[${referenceIndex}].apkDownloads[${downloadIndex}].url必须使用HTTPS`);
+    return { provider, label: requiredText(item.label, `candidates[${candidateIndex}].references[${referenceIndex}].apkDownloads[${downloadIndex}].label`), url, status };
   });
 }
 

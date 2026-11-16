@@ -59,18 +59,36 @@ export function ReferenceLinks({
         const target = reference.storeUrl ?? reference.url;
         const destination = storeLabel(reference.store);
         return (
-          <a
-            aria-label={`打开${relationLabel(reference.relation)} ${bilingualName(reference.name, reference.nameZh)}的${destination}`}
-            href={target}
-            key={`${reference.name}-${target}`}
-            rel="noopener noreferrer"
-            target="_blank"
-            title={`${relationLabel(reference.relation)} · ${destination} · ${bilingualName(reference.name, reference.nameZh)}`}
-          >
-            {bilingualName(reference.name, reference.nameZh)}
-            <em className={`object-kind kind-${reference.kind}`}>{referenceKindLabel(reference.kind)}</em>
-            <i aria-hidden="true">↗</i>
-          </a>
+          <span className="reference-item" key={`${reference.name}-${target}`}>
+            <a
+              aria-label={`打开${relationLabel(reference.relation)} ${bilingualName(reference.name, reference.nameZh)}的${destination}`}
+              href={target}
+              rel="noopener noreferrer"
+              target="_blank"
+              title={`${relationLabel(reference.relation)} · ${destination} · ${bilingualName(reference.name, reference.nameZh)}`}
+            >
+              {bilingualName(reference.name, reference.nameZh)}
+              <em className={`object-kind kind-${reference.kind}`}>{referenceKindLabel(reference.kind)}</em>
+              <i aria-hidden="true">↗</i>
+            </a>
+            {reference.apkDownloads?.length ? (
+              <span className="apk-downloads" aria-label={`${bilingualName(reference.name, reference.nameZh)} APK下载`}>
+                <b>APK</b>
+                {reference.apkDownloads.slice(0, compact ? 1 : 3).map((download) => (
+                  <a
+                    className={`apk-download-link apk-${download.status}`}
+                    href={download.url}
+                    key={`${download.provider}-${download.url}`}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title={`${download.status === "verified" ? "已核验" : "待核验"} · ${download.label}`}
+                  >
+                    {download.label}
+                  </a>
+                ))}
+              </span>
+            ) : null}
+          </span>
         );
       })}
     </div>

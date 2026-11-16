@@ -1,0 +1,177 @@
+{
+  "report": {
+    "id": "sel-13532a51-d7fa-4cf7-b26c-424486f29e41",
+    "periodLabel": "2026-11-12 美国 Google Play Puzzle 榜单现查",
+    "publishedAt": "2026-11-12T00:00:00Z",
+    "title": "US Google Play 热门 Puzzle 游戏机会扫描",
+    "summary": "基于 2026-11-11/12 公开美国 Google Play Puzzle 榜单快照与官方商店页，选出 5 个进入灰盒验证的手机游戏机会。榜单只证明需求与竞争存在；玩法是否有趣、留存和付费仍需原型与玩家测试。",
+    "status": "published",
+    "sourceRunId": "sel_13532a51-d7fa-4cf7-b26c-424486f29e41",
+    "methodologyVersion": "app-opportunity-scout-v1.2 + docs12-v1.2 + docs14-v1.0",
+    "payload": {
+      "marketPulse": "AppsXray 与 AppBrain 的美国 Google Play Puzzle 榜单快照显示 Block Blast!、Meowdoku: Brain Puzzle Games、Rotate the Rings、Gossip Harbor: Merge & Story、Magic Sort 等产品进入当日热门榜；官方 Google Play 页进一步核对了产品形态、玩法、评分/评论或安装档位、更新日期和用户反馈。精确下载、收入、留存不可由公开页面完整确认，未作推算。",
+      "sources": [
+        "https://appsxray.com/charts?category=GAME_PUZZLE",
+        "https://www.appbrain.com/stats/google-play-rankings/top_free/puzzle/us",
+        "https://play.google.com/store/apps/details?id=com.block.juggle",
+        "https://play.google.com/store/apps/details?id=com.dodo.mewodoku",
+        "https://play.google.com/store/apps/details?id=game.genix.rotate.ring.circle",
+        "https://play.google.com/store/apps/details?hl=en_US&id=com.mergegames.gossipharbor",
+        "https://play.google.com/store/apps/details?hl=en_US&id=com.grandgames.magicsort"
+      ],
+      "scheduledCount": 5
+    }
+  },
+  "candidates": [
+    {
+      "id": "us-puzzle-001-calm-daily-grid",
+      "route": "A",
+      "title": "Calm Daily Grid",
+      "titleZh": "静心每日逻辑格",
+      "productForm": "mobile_game",
+      "category": "Puzzle / logic deduction",
+      "market": "United States Google Play",
+      "routeScore": 82,
+      "routeRank": 1,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.84,
+      "opportunity": "把 Meowdoku 的猫主题逻辑格与每日挑战需求，重构成更清晰的无压力短局：离线可玩、可解释提示、无生命值倒计时。需求证据来自美国榜单出现与官方页的 800+ 检查题、每日题和无广告描述；是否形成留存需灰盒测试。",
+      "improvements": [
+        "提供逐步解释型提示和可撤销标记，减少逻辑题卡死后的挫败。",
+        "加入 3 分钟短局与无障碍高对比模式，覆盖通勤和碎片时间。"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {"name":"Meowdoku: Cat Logic Puzzle","nameZh":"Meowdoku：猫咪逻辑谜题","kind":"mobile_game","url":"https://play.google.com/store/apps/details?id=com.dodo.mewodoku","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?id=com.dodo.mewodoku","relation":"competitor"},
+        {"name":"Block Blast!","nameZh":"Block Blast! 方块消除","kind":"mobile_game","url":"https://play.google.com/store/apps/details?id=com.block.juggle","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?id=com.block.juggle","relation":"similar"},
+        {"name":"Sudoku.com","nameZh":"Sudoku.com 数独","kind":"mobile_game","url":"https://play.google.com/store/apps/details?id=com.easybrain.sudoku.android","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?id=com.easybrain.sudoku.android","relation":"competitor"}
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.dodo.mewodoku"
+    },
+    {
+      "id": "us-puzzle-002-no-pressure-block",
+      "route": "A",
+      "title": "No-Pressure Block Daily",
+      "titleZh": "无压力方块日课",
+      "productForm": "mobile_game",
+      "category": "Puzzle / block placement",
+      "market": "United States Google Play",
+      "routeScore": 80,
+      "routeRank": 2,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.83,
+      "opportunity": "围绕 Block Blast! 的高需求方块放置循环，做一个不强制复活、不打断棋盘的每日挑战版本。官方开发者页显示 Block Blast! 有 1B+ 下载、4.8 星和 5.45M 条评论；这些是商店展示值，不代表美国单国下载或留存。",
+      "improvements": [
+        "失败后保留棋盘并提供一次可解释重排，降低被迫观看广告或重开造成的流失。",
+        "以每日种子和可分享解法卡替代无尽关卡，建立轻量回访。"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {"name":"Block Blast!","nameZh":"Block Blast! 方块消除","kind":"mobile_game","url":"https://play.google.com/store/apps/details?id=com.block.juggle","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?id=com.block.juggle","relation":"competitor"},
+        {"name":"Rotate the Rings","nameZh":"Rotate the Rings 旋转环","kind":"mobile_game","url":"https://play.google.com/store/apps/details?id=game.genix.rotate.ring.circle","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?id=game.genix.rotate.ring.circle","relation":"similar"},
+        {"name":"Woodoku","nameZh":"Woodoku 木块数独","kind":"mobile_game","url":"https://play.google.com/store/apps/details?id=game.woodoku.wood.block.puzzle","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?id=game.woodoku.wood.block.puzzle","relation":"competitor"}
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.block.juggle"
+    },
+    {
+      "id": "us-puzzle-003-accessible-ring",
+      "route": "A",
+      "title": "Accessible Ring Unwind",
+      "titleZh": "无障碍解环",
+      "productForm": "mobile_game",
+      "category": "Puzzle / spatial untangling",
+      "market": "United States Google Play",
+      "routeScore": 78,
+      "routeRank": 3,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.81,
+      "opportunity": "以 Rotate the Rings 的空间解环需求为验证起点，聚焦可读性、低动效和可恢复进度。官方页显示该产品为 1M+ 下载、4.2 星、73.5K 评论并持续更新；用户价值来自解环和空间认知描述，广告/IAP与复杂度是需要灰盒验证的风险。",
+      "improvements": [
+        "加入颜色符号双编码、左手布局和减弱动效，改善色觉与运动敏感用户体验。",
+        "让提示展示下一步原因而非直接代解，保持空间推理的成就感。"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {"name":"Rotate the Rings","nameZh":"Rotate the Rings 旋转环","kind":"mobile_game","url":"https://play.google.com/store/apps/details?id=game.genix.rotate.ring.circle","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?id=game.genix.rotate.ring.circle","relation":"competitor"},
+        {"name":"Twirlatch: Ring Puzzle","nameZh":"Twirlatch：环形谜题","kind":"mobile_game","url":"https://play.google.com/store/apps/details?id=com.playscout.twirlatch","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?id=com.playscout.twirlatch","relation":"competitor"},
+        {"name":"Block Blast!","nameZh":"Block Blast! 方块消除","kind":"mobile_game","url":"https://play.google.com/store/apps/details?id=com.block.juggle","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?id=com.block.juggle","relation":"substitute"}
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=game.genix.rotate.ring.circle"
+    },
+    {
+      "id": "us-puzzle-004-merge-energy-transparent",
+      "route": "A",
+      "title": "Transparent Merge Mystery",
+      "titleZh": "透明能量合并谜案",
+      "productForm": "mobile_game",
+      "category": "Puzzle / merge narrative",
+      "market": "United States Google Play",
+      "routeScore": 77,
+      "routeRank": 4,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.82,
+      "opportunity": "把 Gossip Harbor 的合并、装修和连续剧情组合改造成能量规则透明的轻叙事谜题。官方页显示 50M+ 下载、4.3 星、约 698K 评论并标注美国榜单 #2 top grossing puzzle；评论中可见能量恢复慢、付费推进和广告承诺不一致等重复痛点。",
+      "improvements": [
+        "显示每个合并目标的能量成本与可获得路径，避免用户只能付费推进。",
+        "把剧情线索与谜题解法绑定，减少纯等待并增加可控的短局目标。"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {"name":"Gossip Harbor: Merge & Story","nameZh":"Gossip Harbor：合并与故事","kind":"mobile_game","url":"https://play.google.com/store/apps/details?hl=en_US&id=com.mergegames.gossipharbor","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?hl=en_US&id=com.mergegames.gossipharbor","relation":"competitor"},
+        {"name":"Royal Match","nameZh":"Royal Match 皇家比赛","kind":"mobile_game","url":"https://play.google.com/store/apps/details?id=com.dreamgames.royalmatch","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?id=com.dreamgames.royalmatch","relation":"similar"},
+        {"name":"Magic Sort!","nameZh":"Magic Sort! 魔法分类","kind":"mobile_game","url":"https://play.google.com/store/apps/details?hl=en_US&id=com.grandgames.magicsort","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?hl=en_US&id=com.grandgames.magicsort","relation":"substitute"}
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?hl=en_US&id=com.mergegames.gossipharbor"
+    },
+    {
+      "id": "us-puzzle-005-fair-water-sort",
+      "route": "A",
+      "title": "Fair Water Sort",
+      "titleZh": "公平水排序",
+      "productForm": "mobile_game",
+      "category": "Puzzle / color sorting",
+      "market": "United States Google Play",
+      "routeScore": 76,
+      "routeRank": 5,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.8,
+      "opportunity": "基于 Magic Sort! 的水排序需求，验证‘可解且不强迫付费’的关卡模型。官方页显示该产品 10M+ 下载、4.6 星、632K 评论并列出美国 top-free puzzle #5；公开评论反复提到高难度关卡、广告和强制购买复活的摩擦。",
+      "improvements": [
+        "每关预先验证可解性并提供可选解法回放，避免用户把失败归因于随机性。",
+        "将广告奖励与免费重试分开，明确复活成本和每日免费次数。"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {"name":"Magic Sort!","nameZh":"Magic Sort! 魔法分类","kind":"mobile_game","url":"https://play.google.com/store/apps/details?hl=en_US&id=com.grandgames.magicsort","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?hl=en_US&id=com.grandgames.magicsort","relation":"competitor"},
+        {"name":"Rotate the Rings","nameZh":"Rotate the Rings 旋转环","kind":"mobile_game","url":"https://play.google.com/store/apps/details?id=game.genix.rotate.ring.circle","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?id=game.genix.rotate.ring.circle","relation":"similar"},
+        {"name":"Block Blast!","nameZh":"Block Blast! 方块消除","kind":"mobile_game","url":"https://play.google.com/store/apps/details?id=com.block.juggle","store":"google_play","storeUrl":"https://play.google.com/store/apps/details?id=com.block.juggle","relation":"substitute"}
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?hl=en_US&id=com.grandgames.magicsort"
+    }
+  ]
+}

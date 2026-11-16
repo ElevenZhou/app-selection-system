@@ -5,144 +5,22 @@ import { RouteMark } from "./components/RouteMark";
 import { bilingualName } from "../lib/localization";
 import { getDashboard } from "../lib/reports";
 
-export const metadata = {
-  title: "总览 · APP 选品驾驶舱",
-};
+export const metadata = { title: "总览 · APP 选品驾驶舱" };
 
 export default async function Home() {
   const { reports, latest, candidates } = await getDashboard();
   const selected = candidates.filter((item) => item.decision === "ROUTE_SELECTED");
-  const routeCounts = (["A", "B", "C"] as const).map((route) => ({
-    route,
-    count: selected.filter((item) => item.route === route).length,
-  }));
-
-  return (
-    <AppShell active="overview">
-      <section className="page-intro">
-        <div>
-          <p className="eyebrow">Portfolio intelligence / 统一档案</p>
-          <h1>每一次选品，<br />都留在同一个系统里。</h1>
-        </div>
-        <div className="intro-note">
-          <span className="live-dot" />
-          <p>网站只建设一次。Loop 后续只新增报告、候选、资料包与排期记录。</p>
-        </div>
-      </section>
-
-      <section className="metric-ribbon" aria-label="最新报告指标">
-        <div>
-          <span>报告总数</span>
-          <strong>{reports.length.toString().padStart(2, "0")}</strong>
-        </div>
-        <div>
-          <span>最新入选</span>
-          <strong>{latest?.totalSelected ?? 0}</strong>
-        </div>
-        <div>
-          <span>资料包就绪</span>
-          <strong>{latest?.totalPackages ?? 0}</strong>
-        </div>
-        <div>
-          <span>当前方法</span>
-          <strong className="metric-word">{latest?.methodologyVersion ?? "—"}</strong>
-        </div>
-      </section>
-
-      <section className="dashboard-grid">
-        <article className="latest-report panel">
-          <div className="section-heading">
-            <div>
-              <span className="section-index">LATEST REPORT</span>
-              <h2>{latest?.title ?? "等待首份报告"}</h2>
-            </div>
-            {latest && (
-              <Link className="text-link" href={`/reports/${latest.id}`}>
-                查看完整报告 →
-              </Link>
-            )}
-          </div>
-          <p className="report-summary">
-            {latest?.summary ?? "运行 App Selection Loop 后，报告会自动出现在这里。"}
-          </p>
-          <div className="route-strip">
-            {routeCounts.map(({ route, count }) => (
-              <div className={`route-cell route-${route.toLowerCase()}`} key={route}>
-                <RouteMark route={route} />
-                <div>
-                  <strong>{count}</strong>
-                  <span>最终入选</span>
-                </div>
-              </div>
-            ))}
-          </div>
-          {latest && (
-            <div className="report-meta">
-              <span>{latest.periodLabel}</span>
-              <span>{formatDate(latest.publishedAt)}</span>
-              <span>{latest.status === "published" ? "已发布" : latest.status}</span>
-            </div>
-          )}
-        </article>
-
-        <article className="pipeline-card panel dark-panel">
-          <span className="section-index">PIPELINE</span>
-          <h2>选品负责把项目交到开发台门口。</h2>
-          <ol className="pipeline-list">
-            <li><span>01</span>三路线独立完成选品</li>
-            <li><span>02</span>每个入选生成完整资料包</li>
-            <li><span>03</span>开发排期单独领取项目</li>
-            <li><span>04</span>开发 Loop 才开始写产品代码</li>
-          </ol>
-          <Link className="light-link" href="/packages">资料包里有什么 →</Link>
-        </article>
-      </section>
-
-      <section className="selection-section">
-        <div className="section-heading">
-          <div>
-            <span className="section-index">SELECTED / BY ROUTE</span>
-            <h2>最新一批入选项目</h2>
-          </div>
-          <Link className="text-link" href="/reports">按时间查看全部报告 →</Link>
-        </div>
-        <div className="candidate-columns">
-          {(["A", "B", "C"] as const).map((route) => (
-            <div className={`candidate-column route-${route.toLowerCase()}`} key={route}>
-              <div className="column-title">
-                <RouteMark route={route} />
-                <span>{routeName(route)}</span>
-              </div>
-              {selected.filter((item) => item.route === route).slice(0, 5).map((item) => (
-                <article className="candidate-row" key={item.id}>
-                  <span className="rank">{String(item.routeRank).padStart(2, "0")}</span>
-                  <ProductIcon compact iconUrl={item.iconUrl} route={item.route} title={item.title} />
-                  <span className="candidate-row-copy">
-                    <Link className="candidate-primary-link" href={`/reports/${item.reportId}#${item.id}`}>{bilingualName(item.title, item.titleZh)}</Link>
-                    <ProductFormBadge compact form={item.productForm} />
-                    <small>{item.category} · {item.market}</small>
-                    <ReferenceLinks compact references={item.references} />
-                  </span>
-                  <b>{item.routeScore}</b>
-                </article>
-              ))}
-            </div>
-          ))}
-        </div>
-      </section>
-    </AppShell>
-  );
+  const games = candidates.filter((item) => item.productForm === "mobile_game").length;
+  const complete = candidates.length ? Math.round(candidates.reduce((sum, item) => sum + item.dataCompleteness, 0) / candidates.length * 100) : 0;
+  const routeCounts = (["A", "B", "C"] as const).map((route) => ({ route, count: selected.filter((item) => item.route === route).length }));
+  const watch = candidates.filter((item) => item.decision === "ROUTE_WATCH" || item.decision === "ROUTE_BACKUP").slice(0, 4);
+  return <AppShell active="overview">
+    <section className="page-intro dashboard-hero"><div><p className="eyebrow">PORTFOLIO DASHBOARD / {latest?.periodLabel ?? "等待数据"}</p><h1>综合机会地图</h1><p className="dashboard-subtitle">跨场景机会分布与组合视图，识别优先投入的增长方向。</p></div><div className="dashboard-controls"><label>时间范围 <select defaultValue="90"><option value="30">近 30 天</option><option value="90">近 90 天</option><option value="365">近 12 个月</option></select></label><label>模式 <select defaultValue="all"><option value="all">全量机会</option><option value="selected">正式入选</option><option value="watch">关注项目</option></select></label><span className="freshness"><span className="live-dot" /> 数据更新时间：{latest ? formatDate(latest.publishedAt) : "暂无"}</span><Link className="text-link" href="/selector">启动一次选品 →</Link></div></section>
+    <section className="metric-ribbon dashboard-kpis" aria-label="组合数据总览"><div><span>报告档案</span><strong>{reports.length.toString().padStart(2, "0")}</strong><small>持续累积</small></div><div><span>当前入选</span><strong>{selected.length}</strong><small>路线 A / B / C</small></div><div><span>证据完整度</span><strong>{complete}%</strong><small>{complete >= 80 ? "达到门槛" : "需要补证"}</small></div><div><span>游戏机会</span><strong>{games}</strong><small>等待灰盒验证</small></div></section>
+    <section className="opportunity-map panel"><div className="section-heading"><div><span className="section-index">OPPORTUNITY MAP</span><h2>机会分布</h2></div><Link className="text-link" href="/candidates">打开候选库 →</Link></div><div className="map-grid">{[["mobile_app", "App 机会", "blue", "工具、知识与生活任务"],["mobile_game", "游戏机会", "red", "先验证市场，再做灰盒"],["cross_platform", "跨端迁移", "green", "同一任务的端间迁移"],["web_app", "日常热点", "gold", "时效性强的短周期需求"]].map(([form, title, tone, desc]) => { const count = candidates.filter((item) => item.productForm === form).length; return <Link href={`/candidates?productForm=${form}`} className="map-cell" data-tone={tone} key={form}><span className="map-dot" /><strong>{count}</strong><b>{title}</b><small>{desc}</small><em>查看分布 →</em></Link>; })}</div></section>
+    <section className="dashboard-grid dashboard-lower"><article className="panel decision-panel"><div className="section-heading"><div><span className="section-index">DECISION QUEUE</span><h2>决策队列</h2></div><Link className="text-link" href="/reports">全部报告 →</Link></div><div className="decision-list">{selected.slice(0, 6).map((item) => <Link className="decision-item" href={`/reports/${item.reportId}#${item.id}`} key={item.id}><span>{String(item.routeRank).padStart(2, "0")}</span><div><b>{bilingualName(item.title, item.titleZh)}</b><small>{item.productForm} · {Math.round(item.dataCompleteness * 100)}% evidence</small></div><strong>{item.routeScore}</strong></Link>)}{!selected.length && <p className="empty-state">暂无正式入选。先启动一次选品或查看历史报告。</p>}</div></article><aside className="panel attention-panel"><span className="section-index">ATTENTION</span><h2>需要关注</h2><p className="muted">证据不足、分数接近门槛或等待下一步验证。</p>{watch.map((item) => <Link className="attention-item" href={`/reports/${item.reportId}#${item.id}`} key={item.id}><span className={`status-dot ${item.decision === "ROUTE_BACKUP" ? "gold" : "red"}`} /><div><b>{bilingualName(item.title, item.titleZh)}</b><small>{item.decision === "ROUTE_BACKUP" ? "备选" : "观察"} · 下一步：补证或测试</small></div></Link>)}{!watch.length && <p className="empty-state">暂无需要关注的项目。</p>}</aside></section>
+    <section className="panel route-overview"><div className="section-heading"><div><span className="section-index">ROUTE PULSE</span><h2>三条路线当前状态</h2></div><Link className="text-link" href="/candidates">筛选候选 →</Link></div><div className="route-pulse-grid">{routeCounts.map(({ route, count }) => <div className={`route-pulse route-${route.toLowerCase()}`} key={route}><RouteMark route={route} /><div><b>{count}</b><span>{routeName(route)} · 正式入选</span></div><small>{latest?.methodologyVersion ?? "等待方法版本"}</small></div>)}</div></section>
+  </AppShell>;
 }
-
-function formatDate(value?: string) {
-  if (!value) return "—";
-  return new Intl.DateTimeFormat("zh-CN", { year: "numeric", month: "long", day: "numeric" }).format(new Date(value));
-}
-
-function routeName(route: "A" | "B" | "C") {
-  return {
-    A: "竞品验证",
-    B: "缺口重构",
-    C: "新需求",
-  }[route];
-}
+function formatDate(value?: string) { return value ? new Intl.DateTimeFormat("zh-CN", { month: "short", day: "numeric", year: "numeric" }).format(new Date(value)) : "—"; }
+function routeName(route: "A" | "B" | "C") { return { A: "竞品验证", B: "缺口重构", C: "新需求" }[route]; }

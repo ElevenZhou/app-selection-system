@@ -1,0 +1,61 @@
+{
+  "msg_type": "interactive",
+  "card": {
+    "config": {
+      "wide_screen_mode": true,
+      "enable_forward": true
+    },
+    "header": {
+      "template": "blue",
+      "title": {
+        "tag": "plain_text",
+        "content": "📊 US Google Play 热门 Puzzle 游戏机会扫描"
+      }
+    },
+    "elements": [
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**🗓️ 2026-11-12 美国 Google Play Puzzle 榜单现查**\n✅ **5** 个最终入选　·　📦 **0** 个生产资料包\n基于 2026-11-11/12 公开美国 Google Play Puzzle 榜单快照与官方商店页，选出 5 个进入灰盒验证的手机游戏机会。榜单只证明需求与竞争存在；玩法是否有趣、留存和付费仍需原型与玩家测试。"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**🔵 A · 竞品验证与微创新（5）**\n\n**1. Calm Daily Grid（静心每日逻辑格）**　`手机游戏`　`82分`\n参考：[Meowdoku: Cat Logic Puzzle（Meowdoku：猫咪逻辑谜题） · 手机游戏](https://play.google.com/store/apps/details?id=com.dodo.mewodoku) · [Block Blast!（Block Blast! 方块消除） · 手机游戏](https://play.google.com/store/apps/details?id=com.block.juggle) · [Sudoku.com（Sudoku.com 数独） · 手机游戏](https://play.google.com/store/apps/details?id=com.easybrain.sudoku.android)\n资料包未就绪\n\n**2. No-Pressure Block Daily（无压力方块日课）**　`手机游戏`　`80分`\n参考：[Block Blast!（Block Blast! 方块消除） · 手机游戏](https://play.google.com/store/apps/details?id=com.block.juggle) · [Rotate the Rings（Rotate the Rings 旋转环） · 手机游戏](https://play.google.com/store/apps/details?id=game.genix.rotate.ring.circle) · [Woodoku（Woodoku 木块数独） · 手机游戏](https://play.google.com/store/apps/details?id=game.woodoku.wood.block.puzzle)\n资料包未就绪\n\n**3. Accessible Ring Unwind（无障碍解环）**　`手机游戏`　`78分`\n参考：[Rotate the Rings（Rotate the Rings 旋转环） · 手机游戏](https://play.google.com/store/apps/details?id=game.genix.rotate.ring.circle) · [Twirlatch: Ring Puzzle（Twirlatch：环形谜题） · 手机游戏](https://play.google.com/store/apps/details?id=com.playscout.twirlatch) · [Block Blast!（Block Blast! 方块消除） · 手机游戏](https://play.google.com/store/apps/details?id=com.block.juggle)\n资料包未就绪\n\n**4. Transparent Merge Mystery（透明能量合并谜案）**　`手机游戏`　`77分`\n参考：[Gossip Harbor: Merge & Story（Gossip Harbor：合并与故事） · 手机游戏](https://play.google.com/store/apps/details?hl=en_US&id=com.mergegames.gossipharbor) · [Royal Match（Royal Match 皇家比赛） · 手机游戏](https://play.google.com/store/apps/details?id=com.dreamgames.royalmatch) · [Magic Sort!（Magic Sort! 魔法分类） · 手机游戏](https://play.google.com/store/apps/details?hl=en_US&id=com.grandgames.magicsort)\n资料包未就绪\n\n**5. Fair Water Sort（公平水排序）**　`手机游戏`　`76分`\n参考：[Magic Sort!（Magic Sort! 魔法分类） · 手机游戏](https://play.google.com/store/apps/details?hl=en_US&id=com.grandgames.magicsort) · [Rotate the Rings（Rotate the Rings 旋转环） · 手机游戏](https://play.google.com/store/apps/details?id=game.genix.rotate.ring.circle) · [Block Blast!（Block Blast! 方块消除） · 手机游戏](https://play.google.com/store/apps/details?id=com.block.juggle)\n资料包未就绪"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "note",
+        "elements": [
+          {
+            "tag": "plain_text",
+            "content": "三条路线独立评选；开发台以生产资料包为唯一交接入口。"
+          }
+        ]
+      },
+      {
+        "tag": "action",
+        "actions": [
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "查看完整选品报告"
+            },
+            "type": "primary",
+            "url": "https://app-selection-hub.xiaojie-april.chatgpt.site/reports/sel-13532a51-d7fa-4cf7-b26c-424486f29e41"
+          }
+        ]
+      }
+    ]
+  }
+}

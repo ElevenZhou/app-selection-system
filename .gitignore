@@ -17,3 +17,11 @@ coverage/
 **/*secret*
 **/*token*
 
+# Local project-only credentials and delivery evidence
+**/feishu-receipt.json
+**/*账号密码*
+**/*credentials*
+**/*secret*
+**/*token*
+site/.env.local
+**/feishu-receipt*.json

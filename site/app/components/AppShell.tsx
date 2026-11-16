@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-type Active = "overview" | "reports" | "research" | "candidates" | "packages" | "schedule" | "ingest";
+type Active = "overview" | "reports" | "research" | "candidates" | "packages" | "schedule" | "ingest" | "selector";
 
 const nav = [
   { id: "overview", label: "总览", href: "/" },
@@ -10,6 +10,7 @@ const nav = [
   { id: "packages", label: "资料包", href: "/packages" },
   { id: "schedule", label: "开发排期", href: "/schedule" },
   { id: "ingest", label: "结果入库", href: "/ingest" },
+  { id: "selector", label: "启动选品", href: "/selector" },
 ] as const;
 
 export function AppShell({ active, children }: { active: Active; children: React.ReactNode }) {

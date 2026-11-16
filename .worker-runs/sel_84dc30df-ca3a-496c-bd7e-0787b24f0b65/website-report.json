@@ -1,0 +1,473 @@
+{
+  "report": {
+    "id": "sel_84dc30df-ca3a-496c-bd7e-0787b24f0b65",
+    "periodLabel": "2026-11-12 directed voice task capture",
+    "publishedAt": "2026-11-12T00:00:00Z",
+    "title": "语音快速登记与AI任务执行：定向选品报告",
+    "summary": "联网现查验证了任务管理、语音录入、持续提醒、云文档连接、机器人和Agent执行等真实竞品与开源方案，选出5个具备直接竞品证据的机会。公开资料未提供一致的DAU/留存/收入，因此分数主要依据官方功能、商店存在性、公开集成与用户流程证据，需后续补充市场数据库指标。",
+    "status": "published",
+    "sourceRunId": "sel_84dc30df-ca3a-496c-bd7e-0787b24f0b65",
+    "methodologyVersion": "app-opportunity-scout-v1.2-directed",
+    "payload": {
+      "marketPulse": "语音输入、跨端任务同步、持续提醒和可调用Agent正在从单点功能演进为工作流基础设施；Todoist/TickTick/Any.do验证需求，Notion API与Feishu bots/agents验证连接和执行层，OpenTodo验证开源移动与MCP组合。",
+      "sources": [
+        "https://www.todoist.com/ai-tools",
+        "https://www.todoist.com/integrations",
+        "https://ticktick.com/features",
+        "https://help.ticktick.com/articles/7055782422935240704",
+        "https://www.any.do/",
+        "https://www.notion.com/help/create-integrations-with-the-notion-api",
+        "https://www.notion.com/help/mcp-connections-for-custom-agents",
+        "https://www.feishu.cn/hc/en-US/articles/360024984973-use-bots-in-groups",
+        "https://www.feishu.cn/hc/en-US/articles/610686468172-configure-triggers-and-scheduled-tasks-for-base-agents",
+        "https://github.com/OpenTodoApp/OpenTodo",
+        "https://play.google.com/store/apps/details?id=com.todoist",
+        "https://todoist.en.uptodown.com/android",
+        "https://any-do.en.uptodown.com/android"
+      ],
+      "scheduledCount": 5
+    }
+  },
+  "candidates": [
+    {
+      "id": "voice-cloud-sync",
+      "route": "A",
+      "title": "云同步任务台",
+      "titleZh": "语音云同步任务台",
+      "productForm": "mobile_app",
+      "category": "语音效率工具",
+      "market": "全球/中文团队",
+      "routeScore": 88,
+      "routeRank": 1,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.84,
+      "opportunity": "把口述事项一次转成结构化任务，并双向同步飞书、Notion与任务库。Todoist已有语音/AI入口，TickTick已有语音识别和时间解析，Notion API与飞书机器人证明了连接可行；缺口是跨云文档的统一写入、冲突回执和可追踪来源。",
+      "improvements": [
+        "按住说话后解析标题、截止时间、负责人和来源，并展示可编辑预览后写入多个目标。",
+        "提供飞书/Notion连接器、字段映射、失败重试和逐条同步回执。"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Todoist",
+          "nameZh": "Todoist",
+          "kind": "mobile_app",
+          "url": "https://www.todoist.com/ai-tools",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.todoist",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Todoist Android APK/XAPK",
+              "url": "https://todoist.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "TickTick",
+          "nameZh": "滴答清单 TickTick",
+          "kind": "mobile_app",
+          "url": "https://ticktick.com/features",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.ticktick.task",
+          "relation": "competitor"
+        },
+        {
+          "name": "Any.do",
+          "nameZh": "Any.do",
+          "kind": "mobile_app",
+          "url": "https://www.any.do/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.anydo",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Any.do Android APK",
+              "url": "https://any-do.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "Notion",
+          "nameZh": "Notion",
+          "kind": "web_product",
+          "url": "https://www.notion.com/help/create-integrations-with-the-notion-api",
+          "store": null,
+          "storeUrl": null,
+          "relation": "similar"
+        },
+        {
+          "name": "Feishu Tasks and Bots",
+          "nameZh": "飞书任务与机器人",
+          "kind": "web_product",
+          "url": "https://www.feishu.cn/hc/en-US/articles/360024984973-use-bots-in-groups",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://www.todoist.com/ai-tools"
+    },
+    {
+      "id": "persistent-overdue",
+      "route": "A",
+      "title": "持续逾期提醒管家",
+      "titleZh": "持续逾期提醒管家",
+      "productForm": "mobile_app",
+      "category": "提醒与执行",
+      "market": "全球/高遗忘成本用户",
+      "routeScore": 84,
+      "routeRank": 2,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.84,
+      "opportunity": "TickTick官方明确支持Constant Reminder持续提醒，飞书任务支持逾期每日通知；机会在于用户定义的30分钟逾期循环，并允许完成、改期或修改任务后自动停止，减少漏办。",
+      "improvements": [
+        "将逾期策略设为每30分钟、工作时段/免打扰窗口和最大次数可配置。",
+        "每次提醒带完成、改期、编辑三个快捷动作并记录原因。"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Todoist",
+          "nameZh": "Todoist",
+          "kind": "mobile_app",
+          "url": "https://www.todoist.com/ai-tools",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.todoist",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Todoist Android APK/XAPK",
+              "url": "https://todoist.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "TickTick",
+          "nameZh": "滴答清单 TickTick",
+          "kind": "mobile_app",
+          "url": "https://ticktick.com/features",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.ticktick.task",
+          "relation": "competitor"
+        },
+        {
+          "name": "Any.do",
+          "nameZh": "Any.do",
+          "kind": "mobile_app",
+          "url": "https://www.any.do/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.anydo",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Any.do Android APK",
+              "url": "https://any-do.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "Notion",
+          "nameZh": "Notion",
+          "kind": "web_product",
+          "url": "https://www.notion.com/help/create-integrations-with-the-notion-api",
+          "store": null,
+          "storeUrl": null,
+          "relation": "similar"
+        },
+        {
+          "name": "Feishu Tasks and Bots",
+          "nameZh": "飞书任务与机器人",
+          "kind": "web_product",
+          "url": "https://www.feishu.cn/hc/en-US/articles/360024984973-use-bots-in-groups",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://www.todoist.com/ai-tools"
+    },
+    {
+      "id": "ai-task-router",
+      "route": "A",
+      "title": "AI任务路由器",
+      "titleZh": "AI任务路由器",
+      "productForm": "cross_platform",
+      "category": "AI生产力",
+      "market": "全球/个人与小团队",
+      "routeScore": 86,
+      "routeRank": 3,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.84,
+      "opportunity": "Todoist AI/MCP、Notion Custom Agents、飞书Base agents均能执行或定时动作，但入口分散；机会是把语音任务按立即、排队、定时三类路由，并给出可审计执行状态。",
+      "improvements": [
+        "基于任务意图、依赖和时间窗自动判定立即/排队/定时，并允许用户改判。",
+        "统一执行队列、重试、权限确认和结果回写到原任务。"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Todoist",
+          "nameZh": "Todoist",
+          "kind": "mobile_app",
+          "url": "https://www.todoist.com/ai-tools",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.todoist",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Todoist Android APK/XAPK",
+              "url": "https://todoist.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "TickTick",
+          "nameZh": "滴答清单 TickTick",
+          "kind": "mobile_app",
+          "url": "https://ticktick.com/features",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.ticktick.task",
+          "relation": "competitor"
+        },
+        {
+          "name": "Any.do",
+          "nameZh": "Any.do",
+          "kind": "mobile_app",
+          "url": "https://www.any.do/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.anydo",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Any.do Android APK",
+              "url": "https://any-do.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "Notion",
+          "nameZh": "Notion",
+          "kind": "web_product",
+          "url": "https://www.notion.com/help/create-integrations-with-the-notion-api",
+          "store": null,
+          "storeUrl": null,
+          "relation": "similar"
+        },
+        {
+          "name": "Feishu Tasks and Bots",
+          "nameZh": "飞书任务与机器人",
+          "kind": "web_product",
+          "url": "https://www.feishu.cn/hc/en-US/articles/360024984973-use-bots-in-groups",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://www.todoist.com/ai-tools"
+    },
+    {
+      "id": "conversation-directory-memory",
+      "route": "A",
+      "title": "目录对话任务记忆",
+      "titleZh": "目录对话任务记忆",
+      "productForm": "cross_platform",
+      "category": "个人知识与任务",
+      "market": "全球/多项目用户",
+      "routeScore": 82,
+      "routeRank": 4,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.84,
+      "opportunity": "用户要求新任务新目录新对话、旧任务优先回原目录原对话；现有Todoist/Notion/飞书能组织任务或页面，但没有跨工具的会话归档规则。机会是按任务身份和目录建立可追溯上下文。",
+      "improvements": [
+        "为每个任务生成稳定ID、目录和会话线程，旧任务按语义/链接/时间检索原线程。",
+        "找不到原对话时在原目录新建，并把迁移链写入任务时间线。"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Todoist",
+          "nameZh": "Todoist",
+          "kind": "mobile_app",
+          "url": "https://www.todoist.com/ai-tools",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.todoist",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Todoist Android APK/XAPK",
+              "url": "https://todoist.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "TickTick",
+          "nameZh": "滴答清单 TickTick",
+          "kind": "mobile_app",
+          "url": "https://ticktick.com/features",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.ticktick.task",
+          "relation": "competitor"
+        },
+        {
+          "name": "Any.do",
+          "nameZh": "Any.do",
+          "kind": "mobile_app",
+          "url": "https://www.any.do/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.anydo",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Any.do Android APK",
+              "url": "https://any-do.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "Notion",
+          "nameZh": "Notion",
+          "kind": "web_product",
+          "url": "https://www.notion.com/help/create-integrations-with-the-notion-api",
+          "store": null,
+          "storeUrl": null,
+          "relation": "similar"
+        },
+        {
+          "name": "Feishu Tasks and Bots",
+          "nameZh": "飞书任务与机器人",
+          "kind": "web_product",
+          "url": "https://www.feishu.cn/hc/en-US/articles/360024984973-use-bots-in-groups",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://www.todoist.com/ai-tools"
+    },
+    {
+      "id": "voice-agent-inbox",
+      "route": "A",
+      "title": "Agent收件箱",
+      "titleZh": "语音Agent收件箱",
+      "productForm": "mobile_app",
+      "category": "AI收件箱",
+      "market": "全球/移动办公者",
+      "routeScore": 80,
+      "routeRank": 5,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.84,
+      "opportunity": "OpenTodo提供本地优先、语音、导入与Bring-your-own-AI，Todoist支持语音笔记转任务；机会是一个低摩擦移动收件箱，把长语音中的多个事项拆分并逐条交给Agent处理。",
+      "improvements": [
+        "连续语音转多任务，识别每项的动作、对象、时间与不确定字段。",
+        "按权限把任务分派给Agent，低置信度先询问，高置信度直接执行并返回证据。"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Todoist",
+          "nameZh": "Todoist",
+          "kind": "mobile_app",
+          "url": "https://www.todoist.com/ai-tools",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.todoist",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Todoist Android APK/XAPK",
+              "url": "https://todoist.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "TickTick",
+          "nameZh": "滴答清单 TickTick",
+          "kind": "mobile_app",
+          "url": "https://ticktick.com/features",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.ticktick.task",
+          "relation": "competitor"
+        },
+        {
+          "name": "Any.do",
+          "nameZh": "Any.do",
+          "kind": "mobile_app",
+          "url": "https://www.any.do/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.anydo",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Any.do Android APK",
+              "url": "https://any-do.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "Notion",
+          "nameZh": "Notion",
+          "kind": "web_product",
+          "url": "https://www.notion.com/help/create-integrations-with-the-notion-api",
+          "store": null,
+          "storeUrl": null,
+          "relation": "similar"
+        },
+        {
+          "name": "Feishu Tasks and Bots",
+          "nameZh": "飞书任务与机器人",
+          "kind": "web_product",
+          "url": "https://www.feishu.cn/hc/en-US/articles/360024984973-use-bots-in-groups",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://www.todoist.com/ai-tools"
+    }
+  ]
+}

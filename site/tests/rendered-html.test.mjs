@@ -10,12 +10,34 @@ test("finished site metadata replaces starter preview", async () => {
     readFile(new URL("../package.json", import.meta.url), "utf8"),
     readFile(new URL("../.openai/hosting.json", import.meta.url), "utf8"),
   ]);
-  assert.match(page, /每一次选品/);
+  assert.match(page, /综合机会地图/);
   assert.match(shell, /APP PORTFOLIO/);
   assert.match(layout, /APP 选品驾驶舱/);
   assert.doesNotMatch(page, /SkeletonPreview|codex-preview/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   assert.match(hosting, /"d1": "DB"/);
+});
+
+test("dashboard exposes the decision surface and accessible next actions", async () => {
+  const [page, css] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+  ]);
+  assert.match(page, /组合数据总览/);
+  assert.match(page, /OPPORTUNITY MAP/);
+  assert.match(page, /DECISION QUEUE/);
+  assert.match(page, /ATTENTION/);
+  assert.match(page, /ROUTE PULSE/);
+  assert.match(page, /启动一次选品/);
+  assert.match(page, /时间范围/);
+  assert.match(page, /近 30 天/);
+  assert.match(page, /近 90 天/);
+  assert.match(page, /数据更新时间/);
+  assert.match(page, /全量机会/);
+  assert.match(page, /aria-label="组合数据总览"/);
+  assert.match(page, /href=\{`\/candidates\?productForm=\$\{form\}`\}/);
+  assert.match(css, /\.map-grid\{display:grid/);
+  assert.match(css, /@media\(max-width:620px\)\{\.map-grid,\.route-pulse-grid\{grid-template-columns:1fr\}/);
 });
 
 test("report repository preserves route and package boundaries", async () => {
@@ -103,6 +125,26 @@ test("every candidate can render a uniform icon and clickable reference apps", a
   assert.match(ledger, /ProductIcon/);
   assert.match(repository, /references必须包含1–5个/);
   assert.match(migration, /reference_apps/);
+});
+
+test("reference objects can expose verified APK download sources", async () => {
+  const [types, repository, visual, publisher, schema, worker] = await Promise.all([
+    readFile(new URL("../lib/types.ts", import.meta.url), "utf8"),
+    readFile(new URL("../lib/reports.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/components/ProductVisual.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../lib/feishu.ts", import.meta.url), "utf8"),
+    readFile(new URL("../../schemas/website-report.schema.json", import.meta.url), "utf8"),
+    readFile(new URL("../scripts/selection-worker.mjs", import.meta.url), "utf8"),
+  ]);
+  assert.match(types, /apkDownloads\?: ApkDownload\[\]/);
+  assert.match(repository, /validateApkDownloads/);
+  assert.match(repository, /必须使用HTTPS/);
+  assert.match(visual, /APK下载/);
+  assert.match(visual, /apk-download-link/);
+  assert.match(publisher, /APK ·/);
+  assert.ok("apkDownloads" in JSON.parse(schema).properties.candidates.items.properties.references.items.properties);
+  assert.match(worker, /apkDownloads/);
+  assert.match(worker, /APKMirror/);
 });
 
 test("real runs expose verified package downloads without demo seed data", async () => {
@@ -206,4 +248,19 @@ test("Feishu publishing is server-side, report-scoped, and idempotent", async ()
   assert.match(reportsPage, /FeishuPushButton/);
   assert.match(detailPage, /FeishuPushButton/);
   assert.match(migration, /CREATE TABLE `feishu_pushes`/);
+});
+
+test("selection launcher stays within supported tasks and creates a queued request", async () => {
+  const [page, route, shell] = await Promise.all([
+    readFile(new URL("../app/selector/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/selection-requests/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/components/AppShell.tsx", import.meta.url), "utf8"),
+  ]);
+  assert.match(shell, /启动选品/);
+  assert.match(page, /对话式要求/);
+  assert.match(page, /启动选品/);
+  assert.match(route, /MODES = new Set/);
+  assert.match(route, /quantity < 1 \|\| quantity > 20/);
+  assert.match(route, /status: "queued"/);
+  assert.match(route, /selection_requests/);
 });

@@ -39,6 +39,14 @@ export type AppReference = {
   store: "apple_app_store" | "google_play" | null;
   storeUrl: string | null;
   relation: "competitor" | "similar" | "substitute";
+  apkDownloads?: ApkDownload[];
+};
+
+export type ApkDownload = {
+  provider: "apkmirror" | "uptodown" | "f_droid" | "amazon_appstore" | "aurora_store" | "aptoide" | "apkpure" | "other";
+  label: string;
+  url: string;
+  status: "verified" | "needs_verification";
 };
 
 export type Candidate = {
@@ -81,4 +89,22 @@ export type CandidateArchiveFilters = {
   category?: string;
   market?: string;
   query?: string;
+};
+
+export type DashboardMetrics = {
+  reportCount: number;
+  selectedCount: number;
+  backupCount: number;
+  watchCount: number;
+  packageReadyCount: number;
+  averageCompleteness: number | null;
+  latestCollectedAt: string | null;
+};
+
+export type DashboardTaskSummary = {
+  queued: number;
+  processing: number;
+  completed: number;
+  failed: number;
+  total: number;
 };

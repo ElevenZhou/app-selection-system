@@ -1,0 +1,61 @@
+{
+  "msg_type": "interactive",
+  "card": {
+    "config": {
+      "wide_screen_mode": true,
+      "enable_forward": true
+    },
+    "header": {
+      "template": "blue",
+      "title": {
+        "tag": "plain_text",
+        "content": "📊 语音快速登记与AI任务执行：定向选品报告"
+      }
+    },
+    "elements": [
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**🗓️ 2026-11-12 directed voice task capture**\n✅ **5** 个最终入选　·　📦 **0** 个生产资料包\n联网现查验证了任务管理、语音录入、持续提醒、云文档连接、机器人和Agent执行等真实竞品与开源方案，选出5个具备直接竞品证据的机会。公开资料未提供一致的DAU/留存/收入，因此分数主要依据官方功能、商店存在性、公开集成与用户流程证据，需后续补充市场数据库指标。"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**🔵 A · 竞品验证与微创新（5）**\n\n**1. 云同步任务台（语音云同步任务台）**　`移动 App`　`88分`\n参考：[Todoist（Todoist） · 移动 App](https://play.google.com/store/apps/details?id=com.todoist)（[APK · Todoist Android APK/XAPK](https://todoist.en.uptodown.com/android)） · [TickTick（滴答清单 TickTick） · 移动 App](https://play.google.com/store/apps/details?id=com.ticktick.task) · [Any.do（Any.do） · 移动 App](https://play.google.com/store/apps/details?id=com.anydo)（[APK · Any.do Android APK](https://any-do.en.uptodown.com/android)） · [Notion（Notion） · Web 产品](https://www.notion.com/help/create-integrations-with-the-notion-api) · [Feishu Tasks and Bots（飞书任务与机器人） · Web 产品](https://www.feishu.cn/hc/en-US/articles/360024984973-use-bots-in-groups)\n资料包未就绪\n\n**2. 持续逾期提醒管家（持续逾期提醒管家）**　`移动 App`　`84分`\n参考：[Todoist（Todoist） · 移动 App](https://play.google.com/store/apps/details?id=com.todoist)（[APK · Todoist Android APK/XAPK](https://todoist.en.uptodown.com/android)） · [TickTick（滴答清单 TickTick） · 移动 App](https://play.google.com/store/apps/details?id=com.ticktick.task) · [Any.do（Any.do） · 移动 App](https://play.google.com/store/apps/details?id=com.anydo)（[APK · Any.do Android APK](https://any-do.en.uptodown.com/android)） · [Notion（Notion） · Web 产品](https://www.notion.com/help/create-integrations-with-the-notion-api) · [Feishu Tasks and Bots（飞书任务与机器人） · Web 产品](https://www.feishu.cn/hc/en-US/articles/360024984973-use-bots-in-groups)\n资料包未就绪\n\n**3. AI任务路由器（AI任务路由器）**　`跨端应用`　`86分`\n参考：[Todoist（Todoist） · 移动 App](https://play.google.com/store/apps/details?id=com.todoist)（[APK · Todoist Android APK/XAPK](https://todoist.en.uptodown.com/android)） · [TickTick（滴答清单 TickTick） · 移动 App](https://play.google.com/store/apps/details?id=com.ticktick.task) · [Any.do（Any.do） · 移动 App](https://play.google.com/store/apps/details?id=com.anydo)（[APK · Any.do Android APK](https://any-do.en.uptodown.com/android)） · [Notion（Notion） · Web 产品](https://www.notion.com/help/create-integrations-with-the-notion-api) · [Feishu Tasks and Bots（飞书任务与机器人） · Web 产品](https://www.feishu.cn/hc/en-US/articles/360024984973-use-bots-in-groups)\n资料包未就绪\n\n**4. 目录对话任务记忆（目录对话任务记忆）**　`跨端应用`　`82分`\n参考：[Todoist（Todoist） · 移动 App](https://play.google.com/store/apps/details?id=com.todoist)（[APK · Todoist Android APK/XAPK](https://todoist.en.uptodown.com/android)） · [TickTick（滴答清单 TickTick） · 移动 App](https://play.google.com/store/apps/details?id=com.ticktick.task) · [Any.do（Any.do） · 移动 App](https://play.google.com/store/apps/details?id=com.anydo)（[APK · Any.do Android APK](https://any-do.en.uptodown.com/android)） · [Notion（Notion） · Web 产品](https://www.notion.com/help/create-integrations-with-the-notion-api) · [Feishu Tasks and Bots（飞书任务与机器人） · Web 产品](https://www.feishu.cn/hc/en-US/articles/360024984973-use-bots-in-groups)\n资料包未就绪\n\n**5. Agent收件箱（语音Agent收件箱）**　`移动 App`　`80分`\n参考：[Todoist（Todoist） · 移动 App](https://play.google.com/store/apps/details?id=com.todoist)（[APK · Todoist Android APK/XAPK](https://todoist.en.uptodown.com/android)） · [TickTick（滴答清单 TickTick） · 移动 App](https://play.google.com/store/apps/details?id=com.ticktick.task) · [Any.do（Any.do） · 移动 App](https://play.google.com/store/apps/details?id=com.anydo)（[APK · Any.do Android APK](https://any-do.en.uptodown.com/android)） · [Notion（Notion） · Web 产品](https://www.notion.com/help/create-integrations-with-the-notion-api) · [Feishu Tasks and Bots（飞书任务与机器人） · Web 产品](https://www.feishu.cn/hc/en-US/articles/360024984973-use-bots-in-groups)\n资料包未就绪"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "note",
+        "elements": [
+          {
+            "tag": "plain_text",
+            "content": "三条路线独立评选；开发台以生产资料包为唯一交接入口。"
+          }
+        ]
+      },
+      {
+        "tag": "action",
+        "actions": [
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "查看完整选品报告"
+            },
+            "type": "primary",
+            "url": "https://app-selection-hub.xiaojie-april.chatgpt.site/reports/sel_84dc30df-ca3a-496c-bd7e-0787b24f0b65"
+          }
+        ]
+      }
+    ]
+  }
+}
