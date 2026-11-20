@@ -1,15 +1,16 @@
 import Link from "next/link";
 
-type Active = "overview" | "reports" | "research" | "candidates" | "packages" | "schedule" | "ingest" | "selector";
+type Active = "overview" | "reports" | "research" | "candidates" | "packages" | "ingest" | "selector" | "projects" | "prompts";
 
+// APP PORTFOLIO · 调查报告归档保留在 /research，不占用主导航
 const nav = [
   { id: "overview", label: "总览", href: "/" },
   { id: "reports", label: "选品报告", href: "/reports" },
-  { id: "research", label: "调查报告", href: "/research" },
   { id: "candidates", label: "选品总表", href: "/candidates" },
   { id: "packages", label: "资料包", href: "/packages" },
-  { id: "schedule", label: "开发排期", href: "/schedule" },
-  { id: "ingest", label: "结果入库", href: "/ingest" },
+  { id: "projects", label: "制作档案", href: "/projects" },
+  { id: "prompts", label: "提示词库", href: "/prompts" },
+  { id: "ingest", label: "AI整理提交", href: "/ingest" },
   { id: "selector", label: "启动选品", href: "/selector" },
 ] as const;
 
@@ -19,7 +20,7 @@ export function AppShell({ active, children }: { active: Active; children: React
       <a className="skip-link" href="#main-content">跳到主要内容</a>
       <aside className="sidebar">
         <Link className="brand" href="/">
-          <span className="brand-monogram" aria-hidden="true">AX</span>
+          <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
           <span>
             <strong>APP 选品</strong>
             <small>PORTFOLIO INTELLIGENCE</small>
@@ -40,14 +41,11 @@ export function AppShell({ active, children }: { active: Active; children: React
         </nav>
         <div className="sidebar-foot">
           <span className="status-line"><i aria-hidden="true" /> SYSTEM READY</span>
-          <p>三条路线独立评选<br />统一存档，持续积累</p>
+          <p>证据驱动选品<br />从清单到制作</p>
         </div>
       </aside>
       <main className="content" id="main-content">
-        <header className="topbar">
-          <div><span>APP PORTFOLIO</span><b>/</b><strong>{nav.find((item) => item.id === active)?.label}</strong></div>
-          <time>{new Intl.DateTimeFormat("zh-CN", { dateStyle: "long" }).format(new Date())}</time>
-        </header>
+        <header className="topbar workbench-topbar"><div className="topbar-context"><span className="topbar-kicker">APP 选品与构建 · 运营中枢</span><span className="stage-flow"><b className="stage-active">选品</b><i>→</i><b>构建</b><i>→</i><b>验证</b><i>→</i><b>上线</b></span></div><div className="topbar-actions"><span className="team-pill">◉ 产品实验舱</span><span className="ready-pill">进行中</span><time>{new Intl.DateTimeFormat("zh-CN", { month: "short", day: "numeric" }).format(new Date())}</time></div></header>
         {children}
       </main>
     </div>

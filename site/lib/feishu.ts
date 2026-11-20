@@ -2,6 +2,7 @@ import { env } from "cloudflare:workers";
 import type { Candidate, Report, RouteId } from "./types";
 import { bilingualName } from "./localization";
 import { productFormLabel, referenceKindLabel } from "./taxonomy";
+import { buildAiStudioPrompt } from "./aiStudioPrompt";
 
 type FeishuResult = {
   ok: boolean;
@@ -118,12 +119,16 @@ export function buildFeishuCard(report: Report, candidates: Candidate[], origin:
       const packageLink = candidate.packageUrl
         ? markdownLink("📦 生产资料包", absoluteUrl(origin, candidate.packageUrl))
         : "资料包未就绪";
+      const dossierLink = markdownLink("🛠 制作档案", absoluteUrl(origin, `/projects/${encodeURIComponent(candidate.id)}`));
+      const promptPreview = !isResearchReport
+        ? buildAiStudioPrompt(candidate).replace(/\s+/g, " ").slice(0, 360) + "…"
+        : "";
       if (candidate.packageStatus === "READY_FOR_BENCH" && !candidate.packageUrl) {
         throw new Error(`${candidateName} 的生产资料包地址缺失`);
       }
       lines.push(
         `\n**${isResearchReport ? index + 1 : candidate.routeRank}. ${candidateName}**　\`${productFormLabel(candidate.productForm)}\`　\`${candidate.routeScore}分\`\n` +
-        `参考：${references}\n${isResearchReport ? "状态：WATCH，完成报告列出的验证门槛前不进入开发台" : packageLink}`,
+        `参考：${references}\n${isResearchReport ? "状态：WATCH，完成报告列出的验证门槛前不进入开发台" : `${packageLink}　${dossierLink}\n**默认开工提示词**：${promptPreview}`}`,
       );
     }
     elements.push({ tag: "div", text: { tag: "lark_md", content: lines.join("\n") } });

@@ -80,6 +80,42 @@ export type CandidateArchiveEntry = Candidate & {
   publishedAt: string;
 };
 
+export type ProjectStatus = "SELECTED" | "RESEARCHING" | "CONCEPTS_READY" | "CONCEPT_SELECTED" | "BUILD_BRIEF_READY" | "SENT_TO_AI_STUDIO" | "BUILDING" | "FIRST_VERSION_READY" | "QA_REVIEW" | "RELEASE_CANDIDATE" | "PUBLISHED" | "PAUSED";
+
+export type ProjectConcept = {
+  id: string;
+  name: string;
+  theme: string;
+  visual: string;
+  innovation: string;
+  painPoint: string;
+};
+
+export type PromptVersion = {
+  version: string;
+  text: string;
+  createdAt: string;
+};
+
+export type ProjectRecord = {
+  candidateId: string;
+  status: ProjectStatus;
+  selectedConcept: string | null;
+  conceptOptions: ProjectConcept[];
+  aiStudioUrl: string | null;
+  githubUrl: string | null;
+  apkUrl: string | null;
+  testUrl: string | null;
+  testResult: string;
+  storeUrl: string | null;
+  notes: string;
+  assignee: string;
+  promptVersion: string;
+  promptText: string;
+  promptVersions: PromptVersion[];
+  updatedAt: string;
+};
+
 export type CandidateArchiveFilters = {
   reportId?: string;
   route?: RouteId;

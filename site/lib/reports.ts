@@ -5,6 +5,10 @@ import type {
   Candidate,
   CandidateArchiveEntry,
   CandidateArchiveFilters,
+  ProjectRecord,
+  ProjectConcept,
+  PromptVersion,
+  ProjectStatus,
   Report,
   ReportPayload,
   RouteId,
@@ -64,11 +68,42 @@ async function ensureSchema() {
     )`),
     db.prepare("CREATE INDEX IF NOT EXISTS reports_published_at_idx ON reports(published_at DESC)"),
     db.prepare("CREATE INDEX IF NOT EXISTS candidates_report_route_idx ON candidates(report_id, route, route_rank)"),
+    db.prepare(`CREATE TABLE IF NOT EXISTS build_projects (
+      candidate_id TEXT PRIMARY KEY,
+      status TEXT NOT NULL DEFAULT 'SELECTED',
+      selected_concept TEXT,
+      concept_options TEXT NOT NULL DEFAULT '[]',
+      ai_studio_url TEXT,
+      github_url TEXT,
+      apk_url TEXT,
+      test_url TEXT,
+      test_result TEXT NOT NULL DEFAULT '',
+      store_url TEXT,
+      notes TEXT NOT NULL DEFAULT '',
+      assignee TEXT NOT NULL DEFAULT '',
+      prompt_version TEXT NOT NULL DEFAULT '1.0',
+      prompt_text TEXT NOT NULL DEFAULT '',
+      prompt_versions TEXT NOT NULL DEFAULT '[]',
+      updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+    )`),
   ]);
   await ensureCandidatePresentationColumns(db);
+  await ensureBuildProjectColumns(db);
   schemaReady = true;
   await seedDatabase();
   await backfillLocalizedNames();
+}
+
+async function ensureBuildProjectColumns(db: D1Database) {
+  const columns = await db.prepare("PRAGMA table_info(build_projects)").all<{ name: string }>();
+  const names = new Set(columns.results.map((column) => column.name));
+  const migrations = [
+    ["concept_options", "ALTER TABLE build_projects ADD COLUMN concept_options TEXT NOT NULL DEFAULT '[]'"],
+    ["test_result", "ALTER TABLE build_projects ADD COLUMN test_result TEXT NOT NULL DEFAULT ''"],
+    ["prompt_versions", "ALTER TABLE build_projects ADD COLUMN prompt_versions TEXT NOT NULL DEFAULT '[]'"],
+    ["assignee", "ALTER TABLE build_projects ADD COLUMN assignee TEXT NOT NULL DEFAULT ''"],
+  ] as const;
+  for (const [name, statement] of migrations) if (!names.has(name)) await db.prepare(statement).run();
 }
 
 async function ensureCandidatePresentationColumns(db: D1Database) {
@@ -269,6 +304,62 @@ export async function getCandidateFilterOptions() {
   };
 }
 
+export async function getCandidateById(id: string): Promise<CandidateArchiveEntry | null> {
+  await ensureSchema();
+  const row = await getDatabase().prepare(`SELECT c.*, r.title AS report_title, r.period_label, r.published_at
+    FROM candidates c INNER JOIN reports r ON r.id = c.report_id
+    WHERE c.id = ? LIMIT 1`).bind(id).first<CandidateArchiveRow>();
+  if (!row) return null;
+  return { ...mapCandidate(row), reportTitle: row.report_title, periodLabel: row.period_label, publishedAt: row.published_at };
+}
+
+export async function getBuildProject(candidateId: string): Promise<ProjectRecord | null> {
+  await ensureSchema();
+  const row = await getDatabase().prepare("SELECT * FROM build_projects WHERE candidate_id = ?").bind(candidateId).first<ProjectRow>();
+  return row ? mapProject(row) : null;
+}
+
+export async function saveBuildProject(candidateId: string, input: Partial<ProjectRecord>): Promise<ProjectRecord> {
+  await ensureSchema();
+  const current = await getBuildProject(candidateId);
+  const now = new Date().toISOString();
+  const next: ProjectRecord = {
+    candidateId,
+    status: validateProjectStatus(input.status ?? current?.status ?? "SELECTED"),
+    selectedConcept: input.selectedConcept === undefined ? current?.selectedConcept ?? null : input.selectedConcept,
+    conceptOptions: input.conceptOptions === undefined ? current?.conceptOptions ?? [] : input.conceptOptions as ProjectConcept[],
+    aiStudioUrl: input.aiStudioUrl === undefined ? current?.aiStudioUrl ?? null : projectUrl(input.aiStudioUrl, "AI Studio 链接"),
+    githubUrl: input.githubUrl === undefined ? current?.githubUrl ?? null : projectUrl(input.githubUrl, "GitHub 链接"),
+    apkUrl: input.apkUrl === undefined ? current?.apkUrl ?? null : projectUrl(input.apkUrl, "APK 链接"),
+    testUrl: input.testUrl === undefined ? current?.testUrl ?? null : projectUrl(input.testUrl, "测试链接"),
+    testResult: input.testResult === undefined ? current?.testResult ?? "" : String(input.testResult),
+    storeUrl: input.storeUrl === undefined ? current?.storeUrl ?? null : projectUrl(input.storeUrl, "上架链接"),
+    notes: input.notes === undefined ? current?.notes ?? "" : String(input.notes),
+    assignee: input.assignee === undefined ? current?.assignee ?? "" : String(input.assignee),
+    promptVersion: input.promptVersion ?? current?.promptVersion ?? "1.0",
+    promptText: input.promptText ?? current?.promptText ?? "",
+    promptVersions: input.promptVersions === undefined ? current?.promptVersions ?? [] : input.promptVersions as PromptVersion[],
+    updatedAt: now,
+  };
+  if (next.promptText && (!current || current.promptText !== next.promptText)) {
+    const versions = next.promptVersions.filter((item) => item.text !== next.promptText);
+    versions.push({ version: next.promptVersion, text: next.promptText, createdAt: now });
+    next.promptVersions = versions;
+  }
+  await getDatabase().prepare(`INSERT INTO build_projects
+    (candidate_id, status, selected_concept, concept_options, ai_studio_url, github_url, apk_url, test_url, test_result, store_url, notes, assignee, prompt_version, prompt_text, prompt_versions, updated_at)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(candidate_id) DO UPDATE SET status=excluded.status, selected_concept=excluded.selected_concept,
+    concept_options=excluded.concept_options,
+    ai_studio_url=excluded.ai_studio_url, github_url=excluded.github_url, apk_url=excluded.apk_url,
+    test_url=excluded.test_url, test_result=excluded.test_result, store_url=excluded.store_url, notes=excluded.notes, assignee=excluded.assignee,
+    prompt_version=excluded.prompt_version, prompt_text=excluded.prompt_text, prompt_versions=excluded.prompt_versions, updated_at=excluded.updated_at`).bind(
+    next.candidateId, next.status, next.selectedConcept, JSON.stringify(next.conceptOptions), next.aiStudioUrl, next.githubUrl, next.apkUrl,
+    next.testUrl, next.testResult, next.storeUrl, next.notes, next.assignee, next.promptVersion, next.promptText, JSON.stringify(next.promptVersions), next.updatedAt,
+  ).run();
+  return next;
+}
+
 export async function saveReport(input: unknown): Promise<string> {
   await ensureSchema();
   const { report, candidates } = validateInput(input);
@@ -464,6 +555,11 @@ function optionalSha256(value: unknown, label: string) {
   return text;
 }
 
+function projectUrl(value: unknown, label: string): string | null {
+  if (value === null || value === undefined || value === "") return null;
+  return requiredUrl(value, label);
+}
+
 function numberInRange(value: unknown, minimum: number, maximum: number, label: string) {
   const number = Number(value);
   if (!Number.isFinite(number) || number < minimum || number > maximum) {
@@ -476,6 +572,12 @@ function positiveInteger(value: unknown, label: string) {
   const number = Number(value);
   if (!Number.isInteger(number) || number < 1) throw new Error(`${label}必须是正整数`);
   return number;
+}
+
+function validateProjectStatus(value: unknown): ProjectStatus {
+  const allowed: ProjectStatus[] = ["SELECTED", "RESEARCHING", "CONCEPTS_READY", "CONCEPT_SELECTED", "BUILD_BRIEF_READY", "SENT_TO_AI_STUDIO", "BUILDING", "FIRST_VERSION_READY", "QA_REVIEW", "RELEASE_CANDIDATE", "PUBLISHED", "PAUSED"];
+  if (allowed.includes(value as ProjectStatus)) return value as ProjectStatus;
+  throw new Error("项目状态无效");
 }
 
 function mapReport(row: ReportRow): Report {
@@ -549,3 +651,35 @@ type CandidateArchiveRow = CandidateRow & {
   period_label: string;
   published_at: string;
 };
+
+type ProjectRow = {
+  candidate_id: string; status: string; selected_concept: string | null; concept_options: string;
+  ai_studio_url: string | null; github_url: string | null; apk_url: string | null;
+  test_url: string | null; test_result: string; store_url: string | null; notes: string; assignee: string;
+  prompt_version: string; prompt_text: string; prompt_versions: string; updated_at: string;
+};
+
+function mapProject(row: ProjectRow): ProjectRecord {
+  return {
+    candidateId: row.candidate_id,
+    status: validateProjectStatus(row.status),
+    selectedConcept: row.selected_concept,
+    conceptOptions: parseJson<ProjectConcept[]>(row.concept_options, []),
+    aiStudioUrl: row.ai_studio_url,
+    githubUrl: row.github_url,
+    apkUrl: row.apk_url,
+    testUrl: row.test_url,
+    testResult: row.test_result,
+    storeUrl: row.store_url,
+    notes: row.notes,
+    assignee: row.assignee ?? "",
+    promptVersion: row.prompt_version,
+    promptText: row.prompt_text,
+    promptVersions: parseJson<PromptVersion[]>(row.prompt_versions, []),
+    updatedAt: row.updated_at,
+  };
+}
+
+function parseJson<T>(value: string | null | undefined, fallback: T): T {
+  try { return value ? JSON.parse(value) as T : fallback; } catch { return fallback; }
+}
