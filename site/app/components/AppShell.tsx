@@ -16,7 +16,7 @@ const nav = [
 
 export function AppShell({ active, children }: { active: Active; children: React.ReactNode }) {
   return (
-    <div className="app-frame">
+    <div className={`app-frame ${active === "overview" ? "command-frame" : ""}`}>
       <a className="skip-link" href="#main-content">跳到主要内容</a>
       <aside className="sidebar">
         <Link className="brand" href="/">
