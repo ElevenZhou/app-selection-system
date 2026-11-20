@@ -44,7 +44,7 @@ export function AppShell({ active, children }: { active: Active; children: React
           <p>证据驱动选品<br />从清单到制作</p>
         </div>
       </aside>
-      <main className="content" id="main-content">
+      <main className={`content ${active === "overview" ? "command-center" : ""}`} id="main-content">
         <header className="topbar workbench-topbar"><div className="topbar-context"><span className="topbar-kicker">APP 选品与构建 · 运营中枢</span><span className="stage-flow"><b className="stage-active">选品</b><i>→</i><b>构建</b><i>→</i><b>验证</b><i>→</i><b>上线</b></span></div><div className="topbar-actions"><span className="team-pill">◉ 产品实验舱</span><span className="ready-pill">进行中</span><time>{new Intl.DateTimeFormat("zh-CN", { month: "short", day: "numeric" }).format(new Date())}</time></div></header>
         {children}
       </main>
