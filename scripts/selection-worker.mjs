@@ -1,7 +1,16 @@
-const base = process.env.SELECTION_SITE_URL || "https://app-selection-hub.xiaojie-april.chatgpt.site";
-const claim = await fetch(`${base}/api/selection-requests/claim`, { method: "POST" });
-if (!claim.ok) throw new Error(`claim failed: ${claim.status}`);
-const result = await claim.json();
-if (!result.task) { console.log("No queued selection task."); process.exit(0); }
-console.log(`Claimed ${result.task.id}. Research execution must be provided by the configured research adapter.`);
-console.log("Set SELECTION_RESEARCH_ADAPTER_URL to connect the live evidence worker.");
+// Keep the root entrypoint aligned with the executable worker used by the site.
+// The previous version only claimed a task and then reported a capability gap,
+// even though the project already provides an inline fallback in site/scripts.
+// Delegating here preserves one implementation for research, persistence and
+// Feishu idempotency, and still honors SELECTION_SITE_URL/SELECTION_PROJECT_ROOT.
+const { spawn } = await import("node:child_process");
+const { join } = await import("node:path");
+const projectRoot = process.env.SELECTION_PROJECT_ROOT || process.cwd();
+const child = spawn(process.execPath, [join(projectRoot, "site", "scripts", "selection-worker.mjs")], {
+  stdio: "inherit",
+  env: { ...process.env, SELECTION_PROJECT_ROOT: projectRoot },
+});
+child.on("exit", (code, signal) => {
+  if (signal) process.kill(process.pid, signal);
+  process.exitCode = code ?? 1;
+});

@@ -1,0 +1,418 @@
+{
+  "report": {
+    "id": "us-free-puzzle-games-2026-11-18",
+    "periodLabel": "2026-11-18 美国免费榜轻量益智手机游戏",
+    "publishedAt": "2026-11-18T10:45:00+08:00",
+    "title": "美国免费榜热门轻量益智手机游戏 broad 选品",
+    "summary": "基于2026-11-17美国 Google Play 益智榜与美国 App Store Puzzle Top Free 页面现查，输出10个真实竞品驱动的手机游戏机会。前5个为当前优先候选，后5个为备选；榜单和第三方安装计数仅作相对需求代理。",
+    "status": "partial",
+    "sourceRunId": "sel_4a98c090-d36a-4630-85cc-2e155710ad38",
+    "methodologyVersion": "app-opportunity-scout-v1.2 + docs/12 + docs/14",
+    "payload": {
+      "marketPulse": "Google Play美国益智榜（2026-11-17）前列为 Meowdoku、Block Blast、Gossip Harbor、Cube Land、Rotate Rings；Apple美国Puzzle Top Free同时出现 Block Out、Magic Sort、Block Blast、Rotate Rings、Word Tiles等。精确下载、留存和收入未在公开榜单中完整披露，保持未知。",
+      "sources": [
+        "https://appsxray.com/charts?category=GAME_PUZZLE",
+        "https://apps.apple.com/us/iphone/charts/7012?chart=top-free",
+        "https://appgoat.ai/tools/top-charts/google-play/us/games",
+        "https://storelift.net/charts/us/games/free/",
+        "https://block-blast-adventure-master.en.uptodown.com/android",
+        "https://candy-crush-saga.en.uptodown.com/android",
+        "https://homescapes.en.uptodown.com/android",
+        "https://wordscapes.en.uptodown.com/android"
+      ],
+      "scheduledCount": 10
+    }
+  },
+  "candidates": [
+    {
+      "id": "us-puzzle-meowdoku",
+      "route": "A",
+      "title": "Meowdoku: Brain Puzzle Games",
+      "titleZh": "喵数独：脑力益智",
+      "productForm": "mobile_game",
+      "category": "轻量益智手机游戏",
+      "market": "美国 Google Play / App Store 免费榜（2026-11-17快照）",
+      "routeScore": 86.8,
+      "routeRank": 1,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.84,
+      "opportunity": "美国免费榜证据显示 Meowdoku: Brain Puzzle Games 处于当前益智/游戏热门集合；核心机会是围绕“数独与猫主题关卡”做更短、更可解释的轻量体验。榜单排名是公开观察，不等同于下载或收入精确值。",
+      "improvements": [
+        "以每日短局、难度曲线和无猜解题提升轻量益智留存"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Meowdoku: Brain Puzzle Games",
+          "nameZh": "喵数独：脑力益智",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.oakever.meowdoku",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.oakever.meowdoku",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Uptodown Android detail page",
+              "url": "https://meowdoku.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.oakever.meowdoku"
+    },
+    {
+      "id": "us-puzzle-block-blast",
+      "route": "A",
+      "title": "Block Blast!",
+      "titleZh": "方块爆破",
+      "productForm": "mobile_game",
+      "category": "轻量益智手机游戏",
+      "market": "美国 Google Play / App Store 免费榜（2026-11-17快照）",
+      "routeScore": 85.6,
+      "routeRank": 2,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.84,
+      "opportunity": "美国免费榜证据显示 Block Blast! 处于当前益智/游戏热门集合；核心机会是围绕“方块填充与消行”做更短、更可解释的轻量体验。榜单排名是公开观察，不等同于下载或收入精确值。",
+      "improvements": [
+        "做更透明的广告节奏、离线挑战和可解释的每日目标"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Block Blast!",
+          "nameZh": "方块爆破",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.block.juggle",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.block.juggle",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Uptodown Android detail page",
+              "url": "https://block-blast-adventure-master.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.block.juggle"
+    },
+    {
+      "id": "us-puzzle-gossip-harbor",
+      "route": "A",
+      "title": "Gossip Harbor: Merge & Story",
+      "titleZh": "八卦港：合并与故事",
+      "productForm": "mobile_game",
+      "category": "轻量益智手机游戏",
+      "market": "美国 Google Play / App Store 免费榜（2026-11-17快照）",
+      "routeScore": 84.4,
+      "routeRank": 3,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.78,
+      "opportunity": "美国免费榜证据显示 Gossip Harbor: Merge & Story 处于当前益智/游戏热门集合；核心机会是围绕“合并解谜加连续剧情”做更短、更可解释的轻量体验。榜单排名是公开观察，不等同于下载或收入精确值。",
+      "improvements": [
+        "将合并能量与剧情推进拆开，降低等待并提高回访可控性"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Gossip Harbor: Merge & Story",
+          "nameZh": "八卦港：合并与故事",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.gossip.harbor.merge.game",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.gossip.harbor.merge.game",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.gossip.harbor.merge.game"
+    },
+    {
+      "id": "us-puzzle-cube-land",
+      "route": "A",
+      "title": "Cube Land Puzzle Game",
+      "titleZh": "立方岛益智游戏",
+      "productForm": "mobile_game",
+      "category": "轻量益智手机游戏",
+      "market": "美国 Google Play / App Store 免费榜（2026-11-17快照）",
+      "routeScore": 83.2,
+      "routeRank": 4,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.78,
+      "opportunity": "美国免费榜证据显示 Cube Land Puzzle Game 处于当前益智/游戏热门集合；核心机会是围绕“空间方块与关卡解谜”做更短、更可解释的轻量体验。榜单排名是公开观察，不等同于下载或收入精确值。",
+      "improvements": [
+        "提供可旋转预览、失败原因提示和短关卡分享"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Cube Land Puzzle Game",
+          "nameZh": "立方岛益智游戏",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.rotatelab.cubeland",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.rotatelab.cubeland",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.rotatelab.cubeland"
+    },
+    {
+      "id": "us-puzzle-rotate-rings",
+      "route": "A",
+      "title": "Rotate Rings",
+      "titleZh": "旋转圆环",
+      "productForm": "mobile_game",
+      "category": "轻量益智手机游戏",
+      "market": "美国 Google Play / App Store 免费榜（2026-11-17快照）",
+      "routeScore": 82.0,
+      "routeRank": 5,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.78,
+      "opportunity": "美国免费榜证据显示 Rotate Rings 处于当前益智/游戏热门集合；核心机会是围绕“旋转环形逻辑谜题”做更短、更可解释的轻量体验。榜单排名是公开观察，不等同于下载或收入精确值。",
+      "improvements": [
+        "加入每日固定谜题、无障碍色彩方案和解法回放"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Rotate Rings",
+          "nameZh": "旋转圆环",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.oakever.rotaterings",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.oakever.rotaterings",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.oakever.rotaterings"
+    },
+    {
+      "id": "us-puzzle-block-out",
+      "route": "A",
+      "title": "Block Out! - Color Sort Puzzle",
+      "titleZh": "方块出逃：颜色分类",
+      "productForm": "mobile_game",
+      "category": "轻量益智手机游戏",
+      "market": "美国 Google Play / App Store 免费榜（2026-11-17快照）",
+      "routeScore": 80.8,
+      "routeRank": 6,
+      "decision": "ROUTE_BACKUP",
+      "dataCompleteness": 0.78,
+      "opportunity": "美国免费榜证据显示 Block Out! - Color Sort Puzzle 处于当前益智/游戏热门集合；核心机会是围绕“颜色分类与排序”做更短、更可解释的轻量体验。榜单排名是公开观察，不等同于下载或收入精确值。",
+      "improvements": [
+        "用少量可撤销步骤、关卡生成校验和低干扰广告优化体验"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Block Out! - Color Sort Puzzle",
+          "nameZh": "方块出逃：颜色分类",
+          "kind": "mobile_game",
+          "url": "https://apps.apple.com/us/app/block-out-color-sort-puzzle/id6746401124",
+          "store": "apple_app_store",
+          "storeUrl": "https://apps.apple.com/us/app/block-out-color-sort-puzzle/id6746401124",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://apps.apple.com/us/app/block-out-color-sort-puzzle/id6746401124"
+    },
+    {
+      "id": "us-puzzle-magic-sort",
+      "route": "A",
+      "title": "Magic Sort! Water Sorting Puzzle",
+      "titleZh": "魔法排序：倒水排序",
+      "productForm": "mobile_game",
+      "category": "轻量益智手机游戏",
+      "market": "美国 Google Play / App Store 免费榜（2026-11-17快照）",
+      "routeScore": 79.6,
+      "routeRank": 7,
+      "decision": "ROUTE_BACKUP",
+      "dataCompleteness": 0.78,
+      "opportunity": "美国免费榜证据显示 Magic Sort! Water Sorting Puzzle 处于当前益智/游戏热门集合；核心机会是围绕“倒水排序益智”做更短、更可解释的轻量体验。榜单排名是公开观察，不等同于下载或收入精确值。",
+      "improvements": [
+        "增加自适应提示、盲人可读反馈和离线关卡包"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Magic Sort! Water Sorting Puzzle",
+          "nameZh": "魔法排序：倒水排序",
+          "kind": "mobile_game",
+          "url": "https://apps.apple.com/us/app/magic-sort-water-sorting-puzzle/id6748711990",
+          "store": "apple_app_store",
+          "storeUrl": "https://apps.apple.com/us/app/magic-sort-water-sorting-puzzle/id6748711990",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://apps.apple.com/us/app/magic-sort-water-sorting-puzzle/id6748711990"
+    },
+    {
+      "id": "us-puzzle-wordscapes",
+      "route": "A",
+      "title": "Wordscapes",
+      "titleZh": "词景",
+      "productForm": "mobile_game",
+      "category": "轻量益智手机游戏",
+      "market": "美国 Google Play / App Store 免费榜（2026-11-17快照）",
+      "routeScore": 78.4,
+      "routeRank": 8,
+      "decision": "ROUTE_BACKUP",
+      "dataCompleteness": 0.84,
+      "opportunity": "美国免费榜证据显示 Wordscapes 处于当前益智/游戏热门集合；核心机会是围绕“字母连词与填字”做更短、更可解释的轻量体验。榜单排名是公开观察，不等同于下载或收入精确值。",
+      "improvements": [
+        "强化每日词汇目标、方言词典透明度和无订阅练习模式"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Wordscapes",
+          "nameZh": "词景",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.peoplefun.wordcross",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.peoplefun.wordcross",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Uptodown Android detail page",
+              "url": "https://wordscapes.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.peoplefun.wordcross"
+    },
+    {
+      "id": "us-puzzle-candy-crush",
+      "route": "A",
+      "title": "Candy Crush Saga",
+      "titleZh": "糖果传奇",
+      "productForm": "mobile_game",
+      "category": "轻量益智手机游戏",
+      "market": "美国 Google Play / App Store 免费榜（2026-11-17快照）",
+      "routeScore": 77.2,
+      "routeRank": 9,
+      "decision": "ROUTE_BACKUP",
+      "dataCompleteness": 0.84,
+      "opportunity": "美国免费榜证据显示 Candy Crush Saga 处于当前益智/游戏热门集合；核心机会是围绕“三消关卡与事件”做更短、更可解释的轻量体验。榜单排名是公开观察，不等同于下载或收入精确值。",
+      "improvements": [
+        "把体力、广告和失败反馈做成可预测规则，减少挫败流失"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Candy Crush Saga",
+          "nameZh": "糖果传奇",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.king.candycrushsaga",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.king.candycrushsaga",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Uptodown Android detail page",
+              "url": "https://candy-crush-saga.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.king.candycrushsaga"
+    },
+    {
+      "id": "us-puzzle-homescapes",
+      "route": "A",
+      "title": "Homescapes",
+      "titleZh": "梦幻家园",
+      "productForm": "mobile_game",
+      "category": "轻量益智手机游戏",
+      "market": "美国 Google Play / App Store 免费榜（2026-11-17快照）",
+      "routeScore": 76.0,
+      "routeRank": 10,
+      "decision": "ROUTE_BACKUP",
+      "dataCompleteness": 0.84,
+      "opportunity": "美国免费榜证据显示 Homescapes 处于当前益智/游戏热门集合；核心机会是围绕“三消加家园装修”做更短、更可解释的轻量体验。榜单排名是公开观察，不等同于下载或收入精确值。",
+      "improvements": [
+        "缩短装修任务链并显示资源来源，改善剧情与关卡节奏"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Homescapes",
+          "nameZh": "梦幻家园",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.playrix.homescapes",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.playrix.homescapes",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Uptodown Android detail page",
+              "url": "https://homescapes.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.playrix.homescapes"
+    }
+  ]
+}

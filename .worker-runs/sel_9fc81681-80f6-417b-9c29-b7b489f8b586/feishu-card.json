@@ -1,0 +1,61 @@
+{
+  "msg_type": "interactive",
+  "card": {
+    "config": {
+      "wide_screen_mode": true,
+      "enable_forward": true
+    },
+    "header": {
+      "template": "blue",
+      "title": {
+        "tag": "plain_text",
+        "content": "📊 非英语头部国家、阿拉伯国家、法语与西班牙语市场 Google Play 免费游戏上升候选"
+      }
+    },
+    "elements": [
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**🗓️ 2026-11-19 定向宽泛扫描**\n🔎 **10** 个深度研究　·　⏸️ **0** 个正式入选\n联网现查了沙特、阿联酋及法语/西班牙语覆盖市场的 Google Play 免费游戏榜单。10个候选均有官方 Google Play 详情页；多数增长证据来自当日趋势榜或近期安装代理，未取得统一的3/6/12个月下载序列，因此全部保持 ROUTE_WATCH。"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**🔵 A · 竞品验证与微创新（10）**\n\n**1. Roblox（Roblox）**　`手机游戏`　`70.5分`\n参考：[Roblox（Roblox） · 手机游戏](https://play.google.com/store/apps/details?id=com.roblox.client)（[APK · Uptodown Android详情页](https://roblox.en.uptodown.com/android)）\n资料包未就绪\n\n**2. MemeMix Challenge: Funny Party（MemeMix 挑战：搞笑派对）**　`手机游戏`　`69.0分`\n参考：[MemeMix Challenge: Funny Party（MemeMix 挑战：搞笑派对） · 手机游戏](https://play.google.com/store/apps/details?id=com.mimik.challenge.fun)\n资料包未就绪\n\n**3. Last Beacon: Survival（末日灯塔：生存）**　`手机游戏`　`67.5分`\n参考：[Last Beacon: Survival（末日灯塔：生存） · 手机游戏](https://play.google.com/store/apps/details?id=com.hnhs.endlesssea.gp)\n资料包未就绪\n\n**4. Wild West: Farm Town Simulator（狂野西部农场小镇）**　`手机游戏`　`66.0分`\n参考：[Wild West: Farm Town Simulator（狂野西部农场小镇） · 手机游戏](https://play.google.com/store/apps/details?id=com.socialquantum.west3dint)\n资料包未就绪\n\n**5. Bola Capture（套索物理捕捉）**　`手机游戏`　`64.5分`\n参考：[Bola Capture（套索物理捕捉） · 手机游戏](https://play.google.com/store/apps/details?id=com.kayac.BolaCapture)\n资料包未就绪\n\n**6. Evil Tic Tac Toe（邪恶井字棋）**　`手机游戏`　`63.0分`\n参考：[Evil Tic Tac Toe（邪恶井字棋） · 手机游戏](https://play.google.com/store/apps/details?id=com.thefrontend.eviltictactoe)\n资料包未就绪\n\n**7. Paper.io 2（领地画线）**　`手机游戏`　`61.5分`\n参考：[Paper.io 2（领地画线） · 手机游戏](https://play.google.com/store/apps/details?id=io.voodoo.paper2)（[APK · Uptodown Android详情页](https://paper-io-2.en.uptodown.com/android)）\n资料包未就绪\n\n**8. Block Blast!（方块爆破）**　`手机游戏`　`60.0分`\n参考：[Block Blast!（方块爆破） · 手机游戏](https://play.google.com/store/apps/details?id=com.block.juggle)（[APK · Uptodown Android详情页](https://block-blast-adventure-master.en.uptodown.com/android)）\n资料包未就绪\n\n**9. Gossip Harbor: Merge & Story（八卦港：合并与故事）**　`手机游戏`　`58.5分`\n参考：[Gossip Harbor: Merge & Story（八卦港：合并与故事） · 手机游戏](https://play.google.com/store/apps/details?id=com.mergegames.gossipharbor)（[APK · Uptodown Android详情页](https://gossip-harbor.en.uptodown.com/android)）\n资料包未就绪\n\n**10. 1000+ Games in 1（一千款小游戏合集）**　`手机游戏`　`57.0分`\n参考：[1000+ Games in 1（一千款小游戏合集） · 手机游戏](https://play.google.com/store/apps/details?id=com.happygames.onehundredgames)\n资料包未就绪"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "note",
+        "elements": [
+          {
+            "tag": "plain_text",
+            "content": "三条路线独立评选；开发台以生产资料包为唯一交接入口。"
+          }
+        ]
+      },
+      {
+        "tag": "action",
+        "actions": [
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "查看完整选品报告"
+            },
+            "type": "primary",
+            "url": "https://app-selection-hub.xiaojie-april.chatgpt.site/research/sel_9fc81681-80f6-417b-9c29-b7b489f8b586"
+          }
+        ]
+      }
+    ]
+  }
+}

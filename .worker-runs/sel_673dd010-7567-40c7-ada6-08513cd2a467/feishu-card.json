@@ -1,0 +1,61 @@
+{
+  "msg_type": "interactive",
+  "card": {
+    "config": {
+      "wide_screen_mode": true,
+      "enable_forward": true
+    },
+    "header": {
+      "template": "blue",
+      "title": {
+        "tag": "plain_text",
+        "content": "📊 小语种市场 Web 选品（10款）"
+      }
+    },
+    "elements": [
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**🗓️ 2026-11-18 小语种市场 Web 选品**\n🔎 **10** 个深度研究　·　⏸️ **0** 个正式入选\n联网核验10个小语种学习方向及其真实产品/资源。当前均为 ROUTE_WATCH，因公开流量、活跃、收入与跨来源痛点数据不足，未升级为 ROUTE_SELECTED。"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**🔵 A · 竞品验证与微创新（10）**\n\n**1. Basque Microlearning Web App（巴斯克语微学习 Web 应用）**　`Web 应用`　`71.2分`\n参考：[orainbai.app（巴斯克语本地产品） · Web 产品](https://orainbai.app) · [Duolingo（多邻国） · 移动 App](https://play.google.com/store/apps/details?id=com.duolingo) · [Memrise（Memrise） · 移动 App](https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion) · [EuskaraGo（巴斯克语参考资源） · Web 产品](https://euskarago.eus/en)\n资料包未就绪\n\n**2. Welsh Microlearning Web App（威尔士语微学习 Web 应用）**　`Web 应用`　`70.4分`\n参考：[Adrodd（威尔士语本地产品） · Web 产品](https://adrodd.co.uk) · [Duolingo（多邻国） · 移动 App](https://play.google.com/store/apps/details?id=com.duolingo) · [Memrise（Memrise） · 移动 App](https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion) · [Learn Welsh（威尔士语参考资源） · Web 产品](https://learnwelsh.cymru)\n资料包未就绪\n\n**3. Irish Microlearning Web App（爱尔兰语微学习 Web 应用）**　`Web 应用`　`69.6分`\n参考：[Madra Teanga（爱尔兰语本地产品） · Web 产品](https://www.madrateanga.com/) · [Duolingo（多邻国） · 移动 App](https://play.google.com/store/apps/details?id=com.duolingo) · [Memrise（Memrise） · 移动 App](https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion) · [Teanglann（爱尔兰语参考资源） · Web 产品](https://www.teanglann.ie/en/)\n资料包未就绪\n\n**4. Māori Microlearning Web App（毛利语微学习 Web 应用）**　`Web 应用`　`68.8分`\n参考：[Ako Tahi（毛利语本地产品） · Web 产品](https://www.akotahi.nz/) · [Duolingo（多邻国） · 移动 App](https://play.google.com/store/apps/details?id=com.duolingo) · [Memrise（Memrise） · 移动 App](https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion) · [Te Whanake（毛利语参考资源） · Web 产品](https://tewhanake.maori.nz/)\n资料包未就绪\n\n**5. Cornish Microlearning Web App（康沃尔语微学习 Web 应用）**　`Web 应用`　`68.0分`\n参考：[Learn Cornish（康沃尔语本地产品） · Web 产品](https://learncornish.org/en/app) · [Duolingo（多邻国） · 移动 App](https://play.google.com/store/apps/details?id=com.duolingo) · [Memrise（Memrise） · 移动 App](https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion) · [Learn Cornish Online（康沃尔语参考资源） · Web 产品](https://learncornish.co.uk/)\n资料包未就绪\n\n**6. Breton Microlearning Web App（布列塔尼语微学习 Web 应用）**　`Web 应用`　`67.2分`\n参考：[Desketa（布列塔尼语本地产品） · Web 产品](https://www.fr.brezhoneg.bzh/UTB_FS/3/221-desketa-plateforme-gratuite-pour-apprendre-le-breton-en-ligne.htm) · [Duolingo（多邻国） · 移动 App](https://play.google.com/store/apps/details?id=com.duolingo) · [Memrise（Memrise） · 移动 App](https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion) · [Ofis ar Brezhoneg（布列塔尼语参考资源） · Web 产品](https://www.fr.brezhoneg.bzh/)\n资料包未就绪\n\n**7. Maltese Microlearning Web App（马耳他语微学习 Web 应用）**　`Web 应用`　`66.4分`\n参考：[Iċ-Ċavetta（马耳他语本地产品） · Web 产品](https://cavetta.org.mt/) · [Duolingo（多邻国） · 移动 App](https://play.google.com/store/apps/details?id=com.duolingo) · [Memrise（Memrise） · 移动 App](https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion) · [University of Malta Maltese（马耳他语参考资源） · Web 产品](https://www.um.edu.mt/linguistics/)\n资料包未就绪\n\n**8. Navajo Microlearning Web App（纳瓦霍语微学习 Web 应用）**　`Web 应用`　`65.6分`\n参考：[Diné Bizaad（纳瓦霍语本地产品） · Web 产品](https://www.navajo-nsn.gov/) · [Duolingo（多邻国） · 移动 App](https://play.google.com/store/apps/details?id=com.duolingo) · [Memrise（Memrise） · 移动 App](https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion) · [Mango Languages Cherokee/Navajo（纳瓦霍语参考资源） · Web 产品](https://mangolanguages.com/)\n资料包未就绪\n\n**9. Icelandic Microlearning Web App（冰岛语微学习 Web 应用）**　`Web 应用`　`64.8分`\n参考：[Icelandic Online（冰岛语本地产品） · Web 产品](https://icelandiconline.com/) · [Duolingo（多邻国） · 移动 App](https://play.google.com/store/apps/details?id=com.duolingo) · [Memrise（Memrise） · 移动 App](https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion) · [The Árni Magnússon Institute（冰岛语参考资源） · Web 产品](https://arnastofnun.is/en)\n资料包未就绪\n\n**10. Greenlandic Microlearning Web App（格陵兰语微学习 Web 应用）**　`Web 应用`　`64.0分`\n参考：[Oqaasileriffik（格陵兰语本地产品） · Web 产品](https://oqaasileriffik.gl/) · [Duolingo（多邻国） · 移动 App](https://play.google.com/store/apps/details?id=com.duolingo) · [Memrise（Memrise） · 移动 App](https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion) · [Kalaallisut dictionary（格陵兰语参考资源） · Web 产品](https://ordbog.gl/)\n资料包未就绪"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "note",
+        "elements": [
+          {
+            "tag": "plain_text",
+            "content": "三条路线独立评选；开发台以生产资料包为唯一交接入口。"
+          }
+        ]
+      },
+      {
+        "tag": "action",
+        "actions": [
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "查看完整选品报告"
+            },
+            "type": "primary",
+            "url": "https://app-selection-hub.xiaojie-april.chatgpt.site/research/sel_673dd010-7567-40c7-ada6-08513cd2a467"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "msg_type": "interactive",
+  "card": {
+    "config": {
+      "wide_screen_mode": true,
+      "enable_forward": true
+    },
+    "header": {
+      "template": "blue",
+      "title": {
+        "tag": "plain_text",
+        "content": "📊 美国免费榜热门轻量益智手机游戏 broad 选品"
+      }
+    },
+    "elements": [
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**🗓️ 2026-11-18 美国免费榜轻量益智手机游戏**\n✅ **5** 个最终入选　·　📦 **0** 个生产资料包\n基于2026-11-17美国 Google Play 益智榜与美国 App Store Puzzle Top Free 页面现查，输出10个真实竞品驱动的手机游戏机会。前5个为当前优先候选，后5个为备选；榜单和第三方安装计数仅作相对需求代理。"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**🔵 A · 竞品验证与微创新（5）**\n\n**1. Meowdoku: Brain Puzzle Games（喵数独：脑力益智）**　`手机游戏`　`86.8分`\n参考：[Meowdoku: Brain Puzzle Games（喵数独：脑力益智） · 手机游戏](https://play.google.com/store/apps/details?id=com.oakever.meowdoku)（[APK · Uptodown Android detail page](https://meowdoku.en.uptodown.com/android)）\n资料包未就绪\n\n**2. Block Blast!（方块爆破）**　`手机游戏`　`85.6分`\n参考：[Block Blast!（方块爆破） · 手机游戏](https://play.google.com/store/apps/details?id=com.block.juggle)（[APK · Uptodown Android detail page](https://block-blast-adventure-master.en.uptodown.com/android)）\n资料包未就绪\n\n**3. Gossip Harbor: Merge & Story（八卦港：合并与故事）**　`手机游戏`　`84.4分`\n参考：[Gossip Harbor: Merge & Story（八卦港：合并与故事） · 手机游戏](https://play.google.com/store/apps/details?id=com.gossip.harbor.merge.game)\n资料包未就绪\n\n**4. Cube Land Puzzle Game（立方岛益智游戏）**　`手机游戏`　`83.2分`\n参考：[Cube Land Puzzle Game（立方岛益智游戏） · 手机游戏](https://play.google.com/store/apps/details?id=com.rotatelab.cubeland)\n资料包未就绪\n\n**5. Rotate Rings（旋转圆环）**　`手机游戏`　`82.0分`\n参考：[Rotate Rings（旋转圆环） · 手机游戏](https://play.google.com/store/apps/details?id=com.oakever.rotaterings)\n资料包未就绪"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "note",
+        "elements": [
+          {
+            "tag": "plain_text",
+            "content": "三条路线独立评选；开发台以生产资料包为唯一交接入口。"
+          }
+        ]
+      },
+      {
+        "tag": "action",
+        "actions": [
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "查看完整选品报告"
+            },
+            "type": "primary",
+            "url": "https://app-selection-hub.xiaojie-april.chatgpt.site/reports/us-free-puzzle-games-2026-11-18"
+          }
+        ]
+      }
+    ]
+  }
+}

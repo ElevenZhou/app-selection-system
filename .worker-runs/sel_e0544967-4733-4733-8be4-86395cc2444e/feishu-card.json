@@ -1,0 +1,61 @@
+{
+  "msg_type": "interactive",
+  "card": {
+    "config": {
+      "wide_screen_mode": true,
+      "enable_forward": true
+    },
+    "header": {
+      "template": "blue",
+      "title": {
+        "tag": "plain_text",
+        "content": "📊 TikTok 热门小游戏：末日逃生与数字加减 PK 机会扫描"
+      }
+    },
+    "elements": [
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**🗓️ 2026-11-19 TikTok 末日逃生与数字PK小游戏 broad**\n🔎 **10** 个深度研究　·　⏸️ **0** 个正式入选\n联网现查发现两类可短局传播的小游戏机会：末日逃生资源选择、数字记忆/合并/找数 PK。TikTok 页面本身受 robots 限制，热度证据采用可访问的趋势文章、游戏官方页面和商店详情页交叉记录；所有游戏候选仍需灰盒与玩家测试。"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**🔵 A · 竞品验证与微创新（10）**\n\n**1. Last War: Survival Game remix（末日撤离倒计时）**　`手机游戏`　`86分`\n参考：[Last War: Survival Game（末日战争：生存游戏） · 手机游戏](https://play.google.com/store/apps/details?id=com.fun.lastwar.gp)（[APK · Last War: Survival Android APK/XAPK (Uptodown)](https://last-warsurvival-game.en.uptodown.com/android)） · [Whiteout Survival（白夜极光：生存） · 手机游戏](https://play.google.com/store/apps/details?id=com.gof.global) · [State of Survival（末日生存：State of Survival） · 手机游戏](https://play.google.com/store/apps/details?id=com.kingsgroup.dcdl)\n资料包未就绪\n\n**2. Whiteout Escape Run（白夜雪原逃生跑酷）**　`手机游戏`　`84分`\n参考：[Whiteout Survival（白夜极光：生存） · 手机游戏](https://play.google.com/store/apps/details?id=com.gof.global) · [Last War: Survival Game（末日战争：生存游戏） · 手机游戏](https://play.google.com/store/apps/details?id=com.fun.lastwar.gp)（[APK · Last War: Survival Android APK/XAPK (Uptodown)](https://last-warsurvival-game.en.uptodown.com/android)） · [The Walking Dead: Survivors（行尸走肉：幸存者） · 手机游戏](https://play.google.com/store/apps/details?id=com.elex.twdsaw)\n资料包未就绪\n\n**3. Shelter Numbers（避难所数字分配）**　`手机游戏`　`81分`\n参考：[State of Survival（末日生存：State of Survival） · 手机游戏](https://play.google.com/store/apps/details?id=com.kingsgroup.dcdl) · [Zero City（零城：末日生存） · 手机游戏](https://play.google.com/store/apps/details?id=com.beingame.zc) · [The Walking Dead: Survivors（行尸走肉：幸存者） · 手机游戏](https://play.google.com/store/apps/details?id=com.elex.twdsaw)\n资料包未就绪\n\n**4. Doomsday Door Duel（末日门牌 PK）**　`手机游戏`　`79分`\n参考：[The Walking Dead: Survivors（行尸走肉：幸存者） · 手机游戏](https://play.google.com/store/apps/details?id=com.elex.twdsaw) · [Last War: Survival Game（末日战争：生存游戏） · 手机游戏](https://play.google.com/store/apps/details?id=com.fun.lastwar.gp)（[APK · Last War: Survival Android APK/XAPK (Uptodown)](https://last-warsurvival-game.en.uptodown.com/android)） · [Whiteout Survival（白夜极光：生存） · 手机游戏](https://play.google.com/store/apps/details?id=com.gof.global)\n资料包未就绪\n\n**5. Zombie Route 10（僵尸路线十选一）**　`手机游戏`　`78分`\n参考：[Zero City（零城：末日生存） · 手机游戏](https://play.google.com/store/apps/details?id=com.beingame.zc) · [State of Survival（末日生存：State of Survival） · 手机游戏](https://play.google.com/store/apps/details?id=com.kingsgroup.dcdl) · [The Walking Dead: Survivors（行尸走肉：幸存者） · 手机游戏](https://play.google.com/store/apps/details?id=com.elex.twdsaw)\n资料包未就绪\n\n**6. Number Duel 2048（数字合并双人战）**　`手机游戏`　`85分`\n参考：[2048（2048） · 手机游戏](https://www.2048original.com/) · [Number Match: 2048 Puzzle（数字匹配：2048 拼图） · 手机游戏](https://play.google.com/store/apps/details?id=com.easybrain.number.puzzle.game) · [Threes!（Threes!） · 手机游戏](https://apps.apple.com/us/app/threes/id779157948)\n资料包未就绪\n\n**7. Find the Number Faceoff（找数字对战）**　`手机游戏`　`83分`\n参考：[Find the number viral game（找数字：病毒游戏） · 手机游戏](https://apps.apple.com/sa/app/find-the-number-viral-game/id6786327587?platform=watch) · [Blind Number Challenge（盲猜数字挑战） · 手机游戏](https://skich.app/games/blind-number-challenge-2) · [Guess My Number（猜数字） · Web 产品](https://www.guessmynumber.org/)\n资料包未就绪\n\n**8. The 10 Game Race（10 数竞速）**　`手机游戏`　`80分`\n参考：[The 10 Game（The 10 数字挑战） · Web 产品](https://the10game.vercel.app/) · [Guess My Number（猜数字） · Web 产品](https://www.guessmynumber.org/) · [Find the number viral game（找数字：病毒游戏） · 手机游戏](https://apps.apple.com/sa/app/find-the-number-viral-game/id6786327587?platform=watch)\n资料包未就绪\n\n**9. Guess Number Blitz（猜数闪电战）**　`手机游戏`　`82分`\n参考：[Guess My Number（猜数字） · Web 产品](https://www.guessmynumber.org/) · [Find the number viral game（找数字：病毒游戏） · 手机游戏](https://apps.apple.com/sa/app/find-the-number-viral-game/id6786327587?platform=watch) · [Blind Number Challenge（盲猜数字挑战） · 手机游戏](https://skich.app/games/blind-number-challenge-2)\n资料包未就绪\n\n**10. Number Blast Tactics（数字爆破战术）**　`手机游戏`　`77分`\n参考：[Number Blast（数字爆破） · 手机游戏](https://play.google.com/store/apps/details?id=com.numberblast.game) · [2048（2048） · 手机游戏](https://www.2048original.com/) · [Number Match: 2048 Puzzle（数字匹配：2048 拼图） · 手机游戏](https://play.google.com/store/apps/details?id=com.easybrain.number.puzzle.game)\n资料包未就绪"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "note",
+        "elements": [
+          {
+            "tag": "plain_text",
+            "content": "三条路线独立评选；开发台以生产资料包为唯一交接入口。"
+          }
+        ]
+      },
+      {
+        "tag": "action",
+        "actions": [
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "查看完整选品报告"
+            },
+            "type": "primary",
+            "url": "https://app-selection-hub.xiaojie-april.chatgpt.site/research/tiktok-mini-games-2026-11-19"
+          }
+        ]
+      }
+    ]
+  }
+}

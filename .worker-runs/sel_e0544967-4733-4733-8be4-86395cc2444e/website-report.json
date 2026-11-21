@@ -1,0 +1,594 @@
+{
+  "report": {
+    "id": "tiktok-mini-games-2026-11-19",
+    "periodLabel": "2026-11-19 TikTok 末日逃生与数字PK小游戏 broad",
+    "publishedAt": "2026-11-19T00:00:00Z",
+    "title": "TikTok 热门小游戏：末日逃生与数字加减 PK 机会扫描",
+    "summary": "联网现查发现两类可短局传播的小游戏机会：末日逃生资源选择、数字记忆/合并/找数 PK。TikTok 页面本身受 robots 限制，热度证据采用可访问的趋势文章、游戏官方页面和商店详情页交叉记录；所有游戏候选仍需灰盒与玩家测试。",
+    "status": "partial",
+    "sourceRunId": "sel_e0544967-4733-4733-8be4-86395cc2444e",
+    "methodologyVersion": "app-opportunity-scout 1.0 / docs12-v1.2 / docs14-v1.0",
+    "payload": {
+      "marketPulse": "公开趋势材料将 Word Chain、Snap Game、Number Substitution、2048 等短时互动格式描述为 TikTok gaming 热点；Guess My Number 官方站明确称其在 TikTok 走红。末日生存方向以 Last War、Whiteout Survival、State of Survival 等官方商店产品作为真实需求参照。",
+      "sources": [
+        "https://genz.ai/trends/gaming/drops/how-word-chain-snapgame-number-challenge-went-viral/",
+        "https://www.guessmynumber.org/",
+        "https://play.google.com/store/apps/details?hl=en-us&id=com.fun.lastwar.gp",
+        "https://play.google.com/store/apps/details?id=com.gof.global",
+        "https://play.google.com/store/apps/details?id=com.kingsgroup.dcdl",
+        "https://play.google.com/store/apps/details?id=com.easybrain.number.puzzle.game",
+        "https://apps.apple.com/sa/app/find-the-number-viral-game/id6786327587?platform=watch",
+        "https://the10game.vercel.app/",
+        "https://skich.app/games/blind-number-challenge-2",
+        "https://www.2048original.com/"
+      ],
+      "scheduledCount": 10
+    }
+  },
+  "candidates": [
+    {
+      "id": "tiktok-game-01",
+      "route": "A",
+      "title": "Last War: Survival Game remix",
+      "titleZh": "末日撤离倒计时",
+      "productForm": "mobile_game",
+      "category": "末日生存",
+      "market": "全球 TikTok/英语市场",
+      "routeScore": 86,
+      "routeRank": 1,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.82,
+      "opportunity": "Last War: Survival Game 用短局撤离与数字资源抉择重做 TikTok 可观战的末日小游戏",
+      "improvements": [
+        "把广告式数字闯关改为可玩的 90 秒撤离局",
+        "将资源选择与好友 PK 结果做成可分享回放"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Last War: Survival Game",
+          "nameZh": "末日战争：生存游戏",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.fun.lastwar.gp",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.fun.lastwar.gp",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Last War: Survival Android APK/XAPK (Uptodown)",
+              "url": "https://last-warsurvival-game.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "Whiteout Survival",
+          "nameZh": "白夜极光：生存",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.gof.global",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.gof.global",
+          "relation": "similar"
+        },
+        {
+          "name": "State of Survival",
+          "nameZh": "末日生存：State of Survival",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.kingsgroup.dcdl",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.kingsgroup.dcdl",
+          "relation": "similar"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.fun.lastwar.gp"
+    },
+    {
+      "id": "tiktok-game-02",
+      "route": "A",
+      "title": "Whiteout Escape Run",
+      "titleZh": "白夜雪原逃生跑酷",
+      "productForm": "mobile_game",
+      "category": "末日生存",
+      "market": "全球 TikTok/英语市场",
+      "routeScore": 84,
+      "routeRank": 2,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.82,
+      "opportunity": "Whiteout Survival 的冰原生存题材",
+      "improvements": [
+        "把长线建造压缩为单手滑动逃生",
+        "以温度/体力双资源制造可复盘失败点"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Whiteout Survival",
+          "nameZh": "白夜极光：生存",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.gof.global",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.gof.global",
+          "relation": "competitor"
+        },
+        {
+          "name": "Last War: Survival Game",
+          "nameZh": "末日战争：生存游戏",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.fun.lastwar.gp",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.fun.lastwar.gp",
+          "relation": "similar",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Last War: Survival Android APK/XAPK (Uptodown)",
+              "url": "https://last-warsurvival-game.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "The Walking Dead: Survivors",
+          "nameZh": "行尸走肉：幸存者",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.elex.twdsaw",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.elex.twdsaw",
+          "relation": "similar"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.gof.global"
+    },
+    {
+      "id": "tiktok-game-03",
+      "route": "A",
+      "title": "Shelter Numbers",
+      "titleZh": "避难所数字分配",
+      "productForm": "mobile_game",
+      "category": "末日生存",
+      "market": "全球 TikTok/英语市场",
+      "routeScore": 81,
+      "routeRank": 3,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.82,
+      "opportunity": "State of Survival 的基地资源循环",
+      "improvements": [
+        "用三选一数字分配替代复杂基地菜单",
+        "每局生成一张适合 TikTok 的生存结果卡"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "State of Survival",
+          "nameZh": "末日生存：State of Survival",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.kingsgroup.dcdl",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.kingsgroup.dcdl",
+          "relation": "competitor"
+        },
+        {
+          "name": "Zero City",
+          "nameZh": "零城：末日生存",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.beingame.zc",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.beingame.zc",
+          "relation": "similar"
+        },
+        {
+          "name": "The Walking Dead: Survivors",
+          "nameZh": "行尸走肉：幸存者",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.elex.twdsaw",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.elex.twdsaw",
+          "relation": "similar"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.kingsgroup.dcdl"
+    },
+    {
+      "id": "tiktok-game-04",
+      "route": "A",
+      "title": "Doomsday Door Duel",
+      "titleZh": "末日门牌 PK",
+      "productForm": "mobile_game",
+      "category": "末日生存",
+      "market": "全球 TikTok/英语市场",
+      "routeScore": 79,
+      "routeRank": 4,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.82,
+      "opportunity": "The Walking Dead: Survivors 的角色/营地冲突",
+      "improvements": [
+        "每回合在门牌数字和路线之间做选择",
+        "双人同步猜测让结果天然适合直播"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "The Walking Dead: Survivors",
+          "nameZh": "行尸走肉：幸存者",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.elex.twdsaw",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.elex.twdsaw",
+          "relation": "competitor"
+        },
+        {
+          "name": "Last War: Survival Game",
+          "nameZh": "末日战争：生存游戏",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.fun.lastwar.gp",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.fun.lastwar.gp",
+          "relation": "similar",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Last War: Survival Android APK/XAPK (Uptodown)",
+              "url": "https://last-warsurvival-game.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        },
+        {
+          "name": "Whiteout Survival",
+          "nameZh": "白夜极光：生存",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.gof.global",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.gof.global",
+          "relation": "similar"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.elex.twdsaw"
+    },
+    {
+      "id": "tiktok-game-05",
+      "route": "A",
+      "title": "Zombie Route 10",
+      "titleZh": "僵尸路线十选一",
+      "productForm": "mobile_game",
+      "category": "末日生存",
+      "market": "全球 TikTok/英语市场",
+      "routeScore": 78,
+      "routeRank": 5,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.82,
+      "opportunity": "Zero City 的避难所/僵尸循环",
+      "improvements": [
+        "把地图探索压成 10 格路线选择",
+        "失败时展示可解释的概率和资源损失"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Zero City",
+          "nameZh": "零城：末日生存",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.beingame.zc",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.beingame.zc",
+          "relation": "competitor"
+        },
+        {
+          "name": "State of Survival",
+          "nameZh": "末日生存：State of Survival",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.kingsgroup.dcdl",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.kingsgroup.dcdl",
+          "relation": "similar"
+        },
+        {
+          "name": "The Walking Dead: Survivors",
+          "nameZh": "行尸走肉：幸存者",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.elex.twdsaw",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.elex.twdsaw",
+          "relation": "similar"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.beingame.zc"
+    },
+    {
+      "id": "tiktok-game-06",
+      "route": "A",
+      "title": "Number Duel 2048",
+      "titleZh": "数字合并双人战",
+      "productForm": "mobile_game",
+      "category": "数字加减 PK",
+      "market": "全球 TikTok/英语市场",
+      "routeScore": 85,
+      "routeRank": 6,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.82,
+      "opportunity": "2048 的滑动合并机制",
+      "improvements": [
+        "实时镜像棋盘与 60 秒回合",
+        "把连击、阻挡和逆转做成短视频高光"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "2048",
+          "nameZh": "2048",
+          "kind": "mobile_game",
+          "url": "https://www.2048original.com/",
+          "store": "google_play",
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Number Match: 2048 Puzzle",
+          "nameZh": "数字匹配：2048 拼图",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.easybrain.number.puzzle.game",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.easybrain.number.puzzle.game",
+          "relation": "similar"
+        },
+        {
+          "name": "Threes!",
+          "nameZh": "Threes!",
+          "kind": "mobile_game",
+          "url": "https://apps.apple.com/us/app/threes/id779157948",
+          "store": "apple_app_store",
+          "storeUrl": "https://apps.apple.com/us/app/threes/id779157948",
+          "relation": "similar"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://www.2048original.com/"
+    },
+    {
+      "id": "tiktok-game-07",
+      "route": "A",
+      "title": "Find the Number Faceoff",
+      "titleZh": "找数字对战",
+      "productForm": "mobile_game",
+      "category": "数字加减 PK",
+      "market": "全球 TikTok/英语市场",
+      "routeScore": 83,
+      "routeRank": 7,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.82,
+      "opportunity": "Find the Number viral game 的找数竞速",
+      "improvements": [
+        "加入算式目标而非单纯找数",
+        "按反应时间和错误率分层匹配"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Find the number viral game",
+          "nameZh": "找数字：病毒游戏",
+          "kind": "mobile_game",
+          "url": "https://apps.apple.com/sa/app/find-the-number-viral-game/id6786327587?platform=watch",
+          "store": "apple_app_store",
+          "storeUrl": "https://apps.apple.com/sa/app/find-the-number-viral-game/id6786327587?platform=watch",
+          "relation": "competitor"
+        },
+        {
+          "name": "Blind Number Challenge",
+          "nameZh": "盲猜数字挑战",
+          "kind": "mobile_game",
+          "url": "https://skich.app/games/blind-number-challenge-2",
+          "store": null,
+          "storeUrl": null,
+          "relation": "similar"
+        },
+        {
+          "name": "Guess My Number",
+          "nameZh": "猜数字",
+          "kind": "web_product",
+          "url": "https://www.guessmynumber.org/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "similar"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://apps.apple.com/sa/app/find-the-number-viral-game/id6786327587?platform=watch"
+    },
+    {
+      "id": "tiktok-game-08",
+      "route": "A",
+      "title": "The 10 Game Race",
+      "titleZh": "10 数竞速",
+      "productForm": "mobile_game",
+      "category": "数字加减 PK",
+      "market": "全球 TikTok/英语市场",
+      "routeScore": 80,
+      "routeRank": 8,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.82,
+      "opportunity": "The 10 Game 的数字记忆挑战",
+      "improvements": [
+        "将记忆顺序和加减目标合并为双人竞速",
+        "生成可分享的逐步解题轨迹"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "The 10 Game",
+          "nameZh": "The 10 数字挑战",
+          "kind": "web_product",
+          "url": "https://the10game.vercel.app/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Guess My Number",
+          "nameZh": "猜数字",
+          "kind": "web_product",
+          "url": "https://www.guessmynumber.org/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "similar"
+        },
+        {
+          "name": "Find the number viral game",
+          "nameZh": "找数字：病毒游戏",
+          "kind": "mobile_game",
+          "url": "https://apps.apple.com/sa/app/find-the-number-viral-game/id6786327587?platform=watch",
+          "store": "apple_app_store",
+          "storeUrl": "https://apps.apple.com/sa/app/find-the-number-viral-game/id6786327587?platform=watch",
+          "relation": "similar"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://the10game.vercel.app/"
+    },
+    {
+      "id": "tiktok-game-09",
+      "route": "A",
+      "title": "Guess Number Blitz",
+      "titleZh": "猜数闪电战",
+      "productForm": "mobile_game",
+      "category": "数字加减 PK",
+      "market": "全球 TikTok/英语市场",
+      "routeScore": 82,
+      "routeRank": 9,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.82,
+      "opportunity": "Guess My Number 的 TikTok 病毒猜数循环",
+      "improvements": [
+        "加入公开房间和观众下注式提示",
+        "把尝试次数转为可比较的赛季积分"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Guess My Number",
+          "nameZh": "猜数字",
+          "kind": "web_product",
+          "url": "https://www.guessmynumber.org/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Find the number viral game",
+          "nameZh": "找数字：病毒游戏",
+          "kind": "mobile_game",
+          "url": "https://apps.apple.com/sa/app/find-the-number-viral-game/id6786327587?platform=watch",
+          "store": "apple_app_store",
+          "storeUrl": "https://apps.apple.com/sa/app/find-the-number-viral-game/id6786327587?platform=watch",
+          "relation": "similar"
+        },
+        {
+          "name": "Blind Number Challenge",
+          "nameZh": "盲猜数字挑战",
+          "kind": "mobile_game",
+          "url": "https://skich.app/games/blind-number-challenge-2",
+          "store": null,
+          "storeUrl": null,
+          "relation": "similar"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://www.guessmynumber.org/"
+    },
+    {
+      "id": "tiktok-game-10",
+      "route": "A",
+      "title": "Number Blast Tactics",
+      "titleZh": "数字爆破战术",
+      "productForm": "mobile_game",
+      "category": "数字加减 PK",
+      "market": "全球 TikTok/英语市场",
+      "routeScore": 77,
+      "routeRank": 10,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.82,
+      "opportunity": "Number Blast 的相邻数字消除得分",
+      "improvements": [
+        "双人轮流拆解相邻数字链",
+        "加入风险倍率与反转道具但保持 90 秒局长"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Number Blast",
+          "nameZh": "数字爆破",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.numberblast.game",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.numberblast.game",
+          "relation": "competitor"
+        },
+        {
+          "name": "2048",
+          "nameZh": "2048",
+          "kind": "mobile_game",
+          "url": "https://www.2048original.com/",
+          "store": "google_play",
+          "storeUrl": null,
+          "relation": "similar"
+        },
+        {
+          "name": "Number Match: 2048 Puzzle",
+          "nameZh": "数字匹配：2048 拼图",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.easybrain.number.puzzle.game",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.easybrain.number.puzzle.game",
+          "relation": "similar"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.numberblast.game"
+    }
+  ]
+}

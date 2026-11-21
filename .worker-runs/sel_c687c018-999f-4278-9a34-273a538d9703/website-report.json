@@ -1,0 +1,409 @@
+{
+  "report": {
+    "id": "sel_c687c018-999f-4278-9a34-273a538d9703",
+    "periodLabel": "2026-11-21 音乐游戏全球榜单",
+    "publishedAt": "2026-11-21T00:00:00Z",
+    "title": "音乐游戏全球热门作品综合选品",
+    "summary": "联网现查各国与全球 Google Play 音乐游戏榜单及官方详情页，形成10个真实竞品驱动的手机游戏机会。下载、评分、评价量仅在官方页面明确展示时记录；其余增长与收入指标保持未知。游戏机会需经灰盒与玩家测试。",
+    "status": "draft",
+    "sourceRunId": "sel_c687c018-999f-4278-9a34-273a538d9703",
+    "methodologyVersion": "app-opportunity-scout-2026-11",
+    "payload": {
+      "marketPulse": "Google Play 页面显示 Beatstar、Magic Tiles 3、Tiles Hop、Piano Tiles 2、Muse Dash、Cytus II、Deemo、Arcaea、Colorful Stage、VOEZ 等在不同地区/全球具备可见下载、评价或榜单证据。",
+      "sources": [
+        "https://play.google.com/store/apps/details?id=com.spaceapegames.beatstar",
+        "https://play.google.com/store/apps/details?id=com.kooapps.pianotiles2gp",
+        "https://play.google.com/store/apps/details?id=com.prpr.musedash",
+        "https://play.google.com/store/apps/details?id=com.rayark.cytus2",
+        "https://play.google.com/store/apps/details?id=com.rayark.pluto",
+        "https://play.google.com/store/apps/details?id=moe.low.arc",
+        "https://play.google.com/store/apps/details?id=com.sega.ColorfulStage.en",
+        "https://play.google.com/store/apps/details?id=com.rayark.valkyrie",
+        "https://play.google.com/store/apps/details?id=com.youmusic.magictiles",
+        "https://play.google.com/store/apps/details?id=com.amanotes.beathopper",
+        "https://deemo.en.uptodown.com/android"
+      ],
+      "scheduledCount": 10
+    }
+  },
+  "candidates": [
+    {
+      "id": "beatstar",
+      "route": "A",
+      "title": "Beatstar",
+      "titleZh": "Beatstar",
+      "productForm": "mobile_game",
+      "category": "音乐游戏/节奏游戏",
+      "market": "全球",
+      "routeScore": 90,
+      "routeRank": 1,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.82,
+      "opportunity": "官方曲库节奏挑战；Google Play 编辑推荐页强调数百艺术家与歌单。",
+      "improvements": [
+        "区域化曲库与版权透明度",
+        "降低体力/广告打断",
+        "新手节奏校准"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Beatstar",
+          "nameZh": "Beatstar",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.spaceapegames.beatstar",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.spaceapegames.beatstar",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.spaceapegames.beatstar"
+    },
+    {
+      "id": "piano-tiles-2",
+      "route": "A",
+      "title": "Piano Tiles 2",
+      "titleZh": "钢琴块2",
+      "productForm": "mobile_game",
+      "category": "音乐游戏/节奏游戏",
+      "market": "全球",
+      "routeScore": 88,
+      "routeRank": 2,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.82,
+      "opportunity": "Google Play 显示 10M+ 下载、4.2 星、700+ 歌曲，并提供离线和排行榜。",
+      "improvements": [
+        "减少强制广告等待",
+        "按地区推荐古典与流行曲",
+        "无障碍节奏辅助"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Piano Tiles 2",
+          "nameZh": "钢琴块2",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.kooapps.pianotiles2gp",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.kooapps.pianotiles2gp",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.kooapps.pianotiles2gp"
+    },
+    {
+      "id": "muse-dash",
+      "route": "A",
+      "title": "Muse Dash",
+      "titleZh": "Muse Dash",
+      "productForm": "mobile_game",
+      "category": "音乐游戏/节奏游戏",
+      "market": "全球",
+      "routeScore": 86,
+      "routeRank": 3,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.82,
+      "opportunity": "Google Play 显示 1M+ 下载、4.5 星，结合跑酷、战斗与节奏。",
+      "improvements": [
+        "降低一次性内容门槛",
+        "练习模式与谱面反馈",
+        "本地化活动"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Muse Dash",
+          "nameZh": "Muse Dash",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.prpr.musedash",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.prpr.musedash",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.prpr.musedash"
+    },
+    {
+      "id": "cytus2",
+      "route": "A",
+      "title": "Cytus II",
+      "titleZh": "Cytus II",
+      "productForm": "mobile_game",
+      "category": "音乐游戏/节奏游戏",
+      "market": "亚洲/全球",
+      "routeScore": 84,
+      "routeRank": 4,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.82,
+      "opportunity": "Google Play 显示 1M+ 下载、约137K评价，官方定位为 Rayark 音乐节奏游戏。",
+      "improvements": [
+        "按章节清晰展示付费内容",
+        "校准与低延迟设置向导",
+        "新玩家曲线"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Cytus II",
+          "nameZh": "Cytus II",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.rayark.cytus2",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.rayark.cytus2",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.rayark.cytus2"
+    },
+    {
+      "id": "deemo",
+      "route": "A",
+      "title": "Deemo",
+      "titleZh": "古树旋律 Deemo",
+      "productForm": "mobile_game",
+      "category": "音乐游戏/节奏游戏",
+      "market": "亚洲/全球",
+      "routeScore": 82,
+      "routeRank": 5,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.9,
+      "opportunity": "Google Play 显示 5M+ 下载、4.5 星、556K评价和 220+ 曲目；Uptodown 详情页核对版本与包名。",
+      "improvements": [
+        "分层曲包定价",
+        "保存云同步与设备迁移",
+        "故事进度回顾"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Deemo",
+          "nameZh": "古树旋律 Deemo",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.rayark.pluto",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.rayark.pluto",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Deemo Android detail page",
+              "url": "https://deemo.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.rayark.pluto"
+    },
+    {
+      "id": "arcaea",
+      "route": "A",
+      "title": "Arcaea",
+      "titleZh": "Arcaea",
+      "productForm": "mobile_game",
+      "category": "音乐游戏/节奏游戏",
+      "market": "全球",
+      "routeScore": 80,
+      "routeRank": 6,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.82,
+      "opportunity": "Google Play 显示 5M+ 下载、4.7 星、147K评价、350+歌曲和实时多人。",
+      "improvements": [
+        "新手难度导航",
+        "多人匹配分区",
+        "曲包试用机制"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Arcaea",
+          "nameZh": "Arcaea",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=moe.low.arc",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=moe.low.arc",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=moe.low.arc"
+    },
+    {
+      "id": "colorful-stage",
+      "route": "A",
+      "title": "HATSUNE MIKU: COLORFUL STAGE!",
+      "titleZh": "初音未来：缤纷舞台",
+      "productForm": "mobile_game",
+      "category": "音乐游戏/节奏游戏",
+      "market": "日本/全球",
+      "routeScore": 78,
+      "routeRank": 7,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.82,
+      "opportunity": "Google Play 显示 10M+ 下载、4.5 星、164K评价，并列为音乐畅销榜前列；含虚拟演出和抽卡。",
+      "improvements": [
+        "透明化抽卡概率与保底",
+        "离线练习与演出回放",
+        "地区版权与语言适配"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "HATSUNE MIKU: COLORFUL STAGE!",
+          "nameZh": "初音未来：缤纷舞台",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.sega.ColorfulStage.en",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.sega.ColorfulStage.en",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.sega.ColorfulStage.en"
+    },
+    {
+      "id": "voez",
+      "route": "A",
+      "title": "VOEZ",
+      "titleZh": "VOEZ",
+      "productForm": "mobile_game",
+      "category": "音乐游戏/节奏游戏",
+      "market": "亚洲/全球",
+      "routeScore": 76,
+      "routeRank": 8,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.82,
+      "opportunity": "Google Play 显示 5M+ 下载、4.0 星、108K评价、动态下落轨道和实时排行榜。",
+      "improvements": [
+        "修复音频卡顿与校准",
+        "按网络状况缓存曲目",
+        "分层曲包预览"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "VOEZ",
+          "nameZh": "VOEZ",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.rayark.valkyrie",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.rayark.valkyrie",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.rayark.valkyrie"
+    },
+    {
+      "id": "magic-tiles-3",
+      "route": "A",
+      "title": "Magic Tiles 3",
+      "titleZh": "魔法钢琴块3",
+      "productForm": "mobile_game",
+      "category": "音乐游戏/节奏游戏",
+      "market": "全球",
+      "routeScore": 74,
+      "routeRank": 9,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.82,
+      "opportunity": "Google Play 音乐榜页面标为 #1 top free music；页面评论反复提及广告频繁。",
+      "improvements": [
+        "广告频次上限与可预期奖励",
+        "地区热门歌单轮换",
+        "新手保护连击"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Magic Tiles 3",
+          "nameZh": "魔法钢琴块3",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.youmusic.magictiles",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.youmusic.magictiles",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.youmusic.magictiles"
+    },
+    {
+      "id": "tiles-hop",
+      "route": "A",
+      "title": "Tiles Hop Music & Ball Game",
+      "titleZh": "Tiles Hop 音乐球",
+      "productForm": "mobile_game",
+      "category": "音乐游戏/节奏游戏",
+      "market": "全球",
+      "routeScore": 72,
+      "routeRank": 10,
+      "decision": "ROUTE_SELECTED",
+      "dataCompleteness": 0.82,
+      "opportunity": "Google Play 显示 500M+ 下载、3.37M评价、4.3 星和音乐榜前列；核心是音乐球跳砖。",
+      "improvements": [
+        "曲目版权与音质标注",
+        "失败点回放与训练",
+        "低端机性能模式"
+      ],
+      "packageStatus": "DRAFT",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Tiles Hop Music & Ball Game",
+          "nameZh": "Tiles Hop 音乐球",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.amanotes.beathopper",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.amanotes.beathopper",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.amanotes.beathopper"
+    }
+  ]
+}

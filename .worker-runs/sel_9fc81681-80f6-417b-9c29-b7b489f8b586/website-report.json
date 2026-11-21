@@ -1,0 +1,428 @@
+{
+  "report": {
+    "id": "sel_9fc81681-80f6-417b-9c29-b7b489f8b586",
+    "periodLabel": "2026-11-19 定向宽泛扫描",
+    "publishedAt": "2026-11-19T00:00:00Z",
+    "title": "非英语头部国家、阿拉伯国家、法语与西班牙语市场 Google Play 免费游戏上升候选",
+    "summary": "联网现查了沙特、阿联酋及法语/西班牙语覆盖市场的 Google Play 免费游戏榜单。10个候选均有官方 Google Play 详情页；多数增长证据来自当日趋势榜或近期安装代理，未取得统一的3/6/12个月下载序列，因此全部保持 ROUTE_WATCH。",
+    "status": "partial",
+    "sourceRunId": "sel_9fc81681-80f6-417b-9c29-b7b489f8b586",
+    "methodologyVersion": "app-opportunity-scout-2026-11; website-report-v1",
+    "payload": {
+      "marketPulse": "2026-11-18/19：沙特趋势榜出现 Spider Fighter 3、Keyboard Run、Suzy Says、Perfect Makeover、Wild West、Bola Capture；阿联酋出现 Bola Capture、Evil Tic Tac Toe、Wild West 等。AppBrain沙特免费榜显示 PUBG MOBILE FLASH、Roblox、Block Blast、Paper.io 2、Gossip Harbor、MemeMix、Last Beacon、1000+ Games in 1。法语/西语市场用同一批可核验 Google Play 产品页作为跨市场验证入口；国家级下载增速未公开统一提供。",
+      "sources": [
+        "https://appsxray.com/charts?category=GAME&chart=trending&country=SA",
+        "https://appsxray.com/charts?category=GAME&chart=trending&country=AE",
+        "https://www.appbrain.com/stats/google-play-rankings/top_free/game/sa",
+        "https://iapp4u.com/blog/games-saudi-vs-uae",
+        "https://play.google.com/store/games?gl=sa",
+        "https://www.similarweb.com/top-apps/google/saudi-arabia/games/top-grossing/trending/"
+      ],
+      "scheduledCount": 10
+    }
+  },
+  "candidates": [
+    {
+      "id": "roblox",
+      "route": "A",
+      "title": "Roblox",
+      "titleZh": "Roblox",
+      "productForm": "mobile_game",
+      "category": "免费休闲/益智/策略游戏",
+      "market": "沙特阿拉伯 / 阿联酋",
+      "routeScore": 70.5,
+      "routeRank": 1,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.72,
+      "opportunity": "虚拟世界UGC平台在沙特免费榜和阿联酋市场持续可见；官方页显示1B+下载、4.2星，属于高需求基准但不是新兴小品。",
+      "improvements": [
+        "本地化UGC发现页",
+        "低带宽社交房间",
+        "家长安全透明化"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Roblox",
+          "nameZh": "Roblox",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.roblox.client",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.roblox.client",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Uptodown Android详情页",
+              "url": "https://roblox.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.roblox.client"
+    },
+    {
+      "id": "meme-mix",
+      "route": "A",
+      "title": "MemeMix Challenge: Funny Party",
+      "titleZh": "MemeMix 挑战：搞笑派对",
+      "productForm": "mobile_game",
+      "category": "免费休闲/益智/策略游戏",
+      "market": "沙特阿拉伯 / 西班牙语市场",
+      "routeScore": 69.0,
+      "routeRank": 2,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.72,
+      "opportunity": "AppsXray/AppBrain将其列入沙特免费/趋势榜；官方页显示1M+下载并在2026-10更新，说明近期有上升信号，但评价与真实留存仍需补证。",
+      "improvements": [
+        "西语/阿语语音包",
+        "离线多人轮流",
+        "广告频控与评分解释"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "MemeMix Challenge: Funny Party",
+          "nameZh": "MemeMix 挑战：搞笑派对",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.mimik.challenge.fun",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.mimik.challenge.fun",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.mimik.challenge.fun"
+    },
+    {
+      "id": "last-beacon",
+      "route": "A",
+      "title": "Last Beacon: Survival",
+      "titleZh": "末日灯塔：生存",
+      "productForm": "mobile_game",
+      "category": "免费休闲/益智/策略游戏",
+      "market": "沙特阿拉伯 / 阿联酋",
+      "routeScore": 67.5,
+      "routeRank": 3,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.72,
+      "opportunity": "AppBrain沙特榜显示约2.3M安装、约980K近期安装代理；官方页100K+下载、4.6星、2026-09更新，增长代理强但第三方口径不同。",
+      "improvements": [
+        "阿语叙事与海湾地理事件",
+        "减少联盟迁移摩擦",
+        "首日资源引导"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Last Beacon: Survival",
+          "nameZh": "末日灯塔：生存",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.hnhs.endlesssea.gp",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.hnhs.endlesssea.gp",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.hnhs.endlesssea.gp"
+    },
+    {
+      "id": "wild-west",
+      "route": "A",
+      "title": "Wild West: Farm Town Simulator",
+      "titleZh": "狂野西部农场小镇",
+      "productForm": "mobile_game",
+      "category": "免费休闲/益智/策略游戏",
+      "market": "沙特阿拉伯 / 阿联酋",
+      "routeScore": 66.0,
+      "routeRank": 4,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.72,
+      "opportunity": "AppsXray在沙特和阿联酋趋势榜出现；官方页10M+下载、4.1星，2026-08更新并有Match-3活动，增长信号为榜单出现与活动更新。",
+      "improvements": [
+        "阿语农场任务",
+        "短局Match-3",
+        "更清晰的仓库容量反馈"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Wild West: Farm Town Simulator",
+          "nameZh": "狂野西部农场小镇",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.socialquantum.west3dint",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.socialquantum.west3dint",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.socialquantum.west3dint"
+    },
+    {
+      "id": "bola-capture",
+      "route": "A",
+      "title": "Bola Capture",
+      "titleZh": "套索物理捕捉",
+      "productForm": "mobile_game",
+      "category": "免费休闲/益智/策略游戏",
+      "market": "阿联酋 / 法国",
+      "routeScore": 64.5,
+      "routeRank": 5,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.72,
+      "opportunity": "AppsXray 2026-11-18将其列为阿联酋趋势榜第1，官方页50K+下载、4.1星、2026-09更新；这是快速上升但样本尚小的新品信号。",
+      "improvements": [
+        "阿拉伯语教程",
+        "更多可复玩短关",
+        "触控瞄准辅助"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Bola Capture",
+          "nameZh": "套索物理捕捉",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.kayac.BolaCapture",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.kayac.BolaCapture",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.kayac.BolaCapture"
+    },
+    {
+      "id": "evil-tic-tac-toe",
+      "route": "A",
+      "title": "Evil Tic Tac Toe",
+      "titleZh": "邪恶井字棋",
+      "productForm": "mobile_game",
+      "category": "免费休闲/益智/策略游戏",
+      "market": "阿联酋 / 法国",
+      "routeScore": 63.0,
+      "routeRank": 6,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.68,
+      "opportunity": "AppsXray 2026-11-18将其列为阿联酋趋势榜第2，且榜单显示▲15；官方商店页作为产品核验入口，下载规模需进一步核对。",
+      "improvements": [
+        "阿语/法语本地化",
+        "残局挑战",
+        "减少误触并解释AI策略"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Evil Tic Tac Toe",
+          "nameZh": "邪恶井字棋",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.thefrontend.eviltictactoe",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.thefrontend.eviltictactoe",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.thefrontend.eviltictactoe"
+    },
+    {
+      "id": "paper-io-2",
+      "route": "A",
+      "title": "Paper.io 2",
+      "titleZh": "领地画线",
+      "productForm": "mobile_game",
+      "category": "免费休闲/益智/策略游戏",
+      "market": "法国 / 西班牙",
+      "routeScore": 61.5,
+      "routeRank": 7,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.68,
+      "opportunity": "AppBrain沙特免费榜列入前列；官方页100M+下载、4.0星，2026-09更新；Uptodown详情页匹配包名并显示1.4M下载，说明跨语言市场有持续分发。",
+      "improvements": [
+        "法语/西语新手保护",
+        "减少中局广告打断",
+        "断线恢复"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Paper.io 2",
+          "nameZh": "领地画线",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=io.voodoo.paper2",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=io.voodoo.paper2",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Uptodown Android详情页",
+              "url": "https://paper-io-2.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=io.voodoo.paper2"
+    },
+    {
+      "id": "block-blast",
+      "route": "A",
+      "title": "Block Blast!",
+      "titleZh": "方块爆破",
+      "productForm": "mobile_game",
+      "category": "免费休闲/益智/策略游戏",
+      "market": "法国 / 西班牙 / 沙特",
+      "routeScore": 60.0,
+      "routeRank": 8,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.68,
+      "opportunity": "AppBrain沙特免费榜第3；官方页1B+下载、4.9星；Uptodown详情页匹配包名并显示约4.96M下载，需求验证强但增长增量需付费数据补齐。",
+      "improvements": [
+        "法语/西语每日挑战",
+        "更透明的广告节奏",
+        "离线进度云备份"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Block Blast!",
+          "nameZh": "方块爆破",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.block.juggle",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.block.juggle",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Uptodown Android详情页",
+              "url": "https://block-blast-adventure-master.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.block.juggle"
+    },
+    {
+      "id": "gossip-harbor",
+      "route": "A",
+      "title": "Gossip Harbor: Merge & Story",
+      "titleZh": "八卦港：合并与故事",
+      "productForm": "mobile_game",
+      "category": "免费休闲/益智/策略游戏",
+      "market": "法国 / 西班牙 / 沙特",
+      "routeScore": 58.5,
+      "routeRank": 9,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.68,
+      "opportunity": "AppBrain沙特免费榜与趋势榜持续出现；官方页50M+下载、4.3星并标注#1 top grossing puzzle，2026-09更新；评论反复提及能量瓶颈，痛点清晰。",
+      "improvements": [
+        "法语/西语剧情",
+        "能量可预测机制",
+        "广告换能量上限"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Gossip Harbor: Merge & Story",
+          "nameZh": "八卦港：合并与故事",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.mergegames.gossipharbor",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.mergegames.gossipharbor",
+          "relation": "competitor",
+          "apkDownloads": [
+            {
+              "provider": "uptodown",
+              "label": "Uptodown Android详情页",
+              "url": "https://gossip-harbor.en.uptodown.com/android",
+              "status": "verified"
+            }
+          ]
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.mergegames.gossipharbor"
+    },
+    {
+      "id": "1000-games",
+      "route": "A",
+      "title": "1000+ Games in 1",
+      "titleZh": "一千款小游戏合集",
+      "productForm": "mobile_game",
+      "category": "免费休闲/益智/策略游戏",
+      "market": "沙特阿拉伯 / 西班牙语市场",
+      "routeScore": 57.0,
+      "routeRank": 10,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.68,
+      "opportunity": "AppBrain 2026-11沙特免费榜出现并显示约3.6M安装、560K近期代理；官方页作为产品核验入口，合集内具体玩法与留存仍需拆解。",
+      "improvements": [
+        "按语言推荐小游戏",
+        "离线包管理",
+        "合并广告频控"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "1000+ Games in 1",
+          "nameZh": "一千款小游戏合集",
+          "kind": "mobile_game",
+          "url": "https://play.google.com/store/apps/details?id=com.happygames.onehundredgames",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.happygames.onehundredgames",
+          "relation": "competitor"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://play.google.com/store/apps/details?id=com.happygames.onehundredgames"
+    }
+  ]
+}

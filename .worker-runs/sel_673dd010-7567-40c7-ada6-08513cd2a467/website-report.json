@@ -1,0 +1,673 @@
+{
+  "report": {
+    "id": "sel_673dd010-7567-40c7-ada6-08513cd2a467",
+    "periodLabel": "2026-11-18 小语种市场 Web 选品",
+    "publishedAt": "2026-11-18T12:00:00+08:00",
+    "title": "小语种市场 Web 选品（10款）",
+    "summary": "联网核验10个小语种学习方向及其真实产品/资源。当前均为 ROUTE_WATCH，因公开流量、活跃、收入与跨来源痛点数据不足，未升级为 ROUTE_SELECTED。",
+    "status": "partial",
+    "sourceRunId": "sel_673dd010-7567-40c7-ada6-08513cd2a467",
+    "methodologyVersion": "app-opportunity-scout-directed-v1",
+    "payload": {
+      "marketPulse": "官方或第一方页面确认了小语种学习产品、课程或词典的存在。需求强度、留存、收入和重复痛点缺少统一公开口径，均标记为 insufficient_data。",
+      "sources": [
+        "https://orainbai.app",
+        "https://adrodd.co.uk",
+        "https://www.madrateanga.com/",
+        "https://www.akotahi.nz/",
+        "https://learncornish.org/en/app",
+        "https://www.fr.brezhoneg.bzh/",
+        "https://cavetta.org.mt/",
+        "https://www.navajo-nsn.gov/",
+        "https://icelandiconline.com/",
+        "https://oqaasileriffik.gl/",
+        "https://www.duolingo.com/",
+        "https://www.memrise.com/",
+        "https://languagedrops.com/"
+      ],
+      "scheduledCount": 10
+    }
+  },
+  "candidates": [
+    {
+      "id": "sel673-01",
+      "route": "A",
+      "title": "Basque Microlearning Web App",
+      "titleZh": "巴斯克语微学习 Web 应用",
+      "productForm": "web_app",
+      "category": "小语种学习与文化",
+      "market": "Basque language market",
+      "routeScore": 71.2,
+      "routeRank": 1,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.58,
+      "opportunity": "证据：orainbai.app与至少两个通用语言学习产品已提供Basque学习或相关资源，说明存在可用供给与学习需求。推断：面向本地身份、移民与旅行场景的短时任务流可能形成更清晰的Web产品定位，需补充流量、活跃和付费数据。",
+      "improvements": [
+        "证据驱动的本地场景短课，按地点、家庭或工作任务组织词汇",
+        "加入方言/发音差异标注与可回放的真人音频",
+        "提供低带宽离线包和学习进度导出"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "orainbai.app",
+          "nameZh": "巴斯克语本地产品",
+          "kind": "web_product",
+          "url": "https://orainbai.app",
+          "store": null,
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Duolingo",
+          "nameZh": "多邻国",
+          "kind": "mobile_app",
+          "url": "https://www.duolingo.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.duolingo",
+          "relation": "similar"
+        },
+        {
+          "name": "Memrise",
+          "nameZh": "Memrise",
+          "kind": "mobile_app",
+          "url": "https://www.memrise.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion",
+          "relation": "similar"
+        },
+        {
+          "name": "EuskaraGo",
+          "nameZh": "巴斯克语参考资源",
+          "kind": "web_product",
+          "url": "https://euskarago.eus/en",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://orainbai.app"
+    },
+    {
+      "id": "sel673-02",
+      "route": "A",
+      "title": "Welsh Microlearning Web App",
+      "titleZh": "威尔士语微学习 Web 应用",
+      "productForm": "web_app",
+      "category": "小语种学习与文化",
+      "market": "Welsh language market",
+      "routeScore": 70.4,
+      "routeRank": 2,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.58,
+      "opportunity": "证据：Adrodd与至少两个通用语言学习产品已提供Welsh学习或相关资源，说明存在可用供给与学习需求。推断：面向本地身份、移民与旅行场景的短时任务流可能形成更清晰的Web产品定位，需补充流量、活跃和付费数据。",
+      "improvements": [
+        "证据驱动的本地场景短课，按地点、家庭或工作任务组织词汇",
+        "加入方言/发音差异标注与可回放的真人音频",
+        "提供低带宽离线包和学习进度导出"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Adrodd",
+          "nameZh": "威尔士语本地产品",
+          "kind": "web_product",
+          "url": "https://adrodd.co.uk",
+          "store": null,
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Duolingo",
+          "nameZh": "多邻国",
+          "kind": "mobile_app",
+          "url": "https://www.duolingo.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.duolingo",
+          "relation": "similar"
+        },
+        {
+          "name": "Memrise",
+          "nameZh": "Memrise",
+          "kind": "mobile_app",
+          "url": "https://www.memrise.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion",
+          "relation": "similar"
+        },
+        {
+          "name": "Learn Welsh",
+          "nameZh": "威尔士语参考资源",
+          "kind": "web_product",
+          "url": "https://learnwelsh.cymru",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://adrodd.co.uk"
+    },
+    {
+      "id": "sel673-03",
+      "route": "A",
+      "title": "Irish Microlearning Web App",
+      "titleZh": "爱尔兰语微学习 Web 应用",
+      "productForm": "web_app",
+      "category": "小语种学习与文化",
+      "market": "Irish language market",
+      "routeScore": 69.6,
+      "routeRank": 3,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.58,
+      "opportunity": "证据：Madra Teanga与至少两个通用语言学习产品已提供Irish学习或相关资源，说明存在可用供给与学习需求。推断：面向本地身份、移民与旅行场景的短时任务流可能形成更清晰的Web产品定位，需补充流量、活跃和付费数据。",
+      "improvements": [
+        "证据驱动的本地场景短课，按地点、家庭或工作任务组织词汇",
+        "加入方言/发音差异标注与可回放的真人音频",
+        "提供低带宽离线包和学习进度导出"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Madra Teanga",
+          "nameZh": "爱尔兰语本地产品",
+          "kind": "web_product",
+          "url": "https://www.madrateanga.com/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Duolingo",
+          "nameZh": "多邻国",
+          "kind": "mobile_app",
+          "url": "https://www.duolingo.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.duolingo",
+          "relation": "similar"
+        },
+        {
+          "name": "Memrise",
+          "nameZh": "Memrise",
+          "kind": "mobile_app",
+          "url": "https://www.memrise.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion",
+          "relation": "similar"
+        },
+        {
+          "name": "Teanglann",
+          "nameZh": "爱尔兰语参考资源",
+          "kind": "web_product",
+          "url": "https://www.teanglann.ie/en/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://www.madrateanga.com/"
+    },
+    {
+      "id": "sel673-04",
+      "route": "A",
+      "title": "Māori Microlearning Web App",
+      "titleZh": "毛利语微学习 Web 应用",
+      "productForm": "web_app",
+      "category": "小语种学习与文化",
+      "market": "Māori language market",
+      "routeScore": 68.8,
+      "routeRank": 4,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.58,
+      "opportunity": "证据：Ako Tahi与至少两个通用语言学习产品已提供Māori学习或相关资源，说明存在可用供给与学习需求。推断：面向本地身份、移民与旅行场景的短时任务流可能形成更清晰的Web产品定位，需补充流量、活跃和付费数据。",
+      "improvements": [
+        "证据驱动的本地场景短课，按地点、家庭或工作任务组织词汇",
+        "加入方言/发音差异标注与可回放的真人音频",
+        "提供低带宽离线包和学习进度导出"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Ako Tahi",
+          "nameZh": "毛利语本地产品",
+          "kind": "web_product",
+          "url": "https://www.akotahi.nz/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Duolingo",
+          "nameZh": "多邻国",
+          "kind": "mobile_app",
+          "url": "https://www.duolingo.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.duolingo",
+          "relation": "similar"
+        },
+        {
+          "name": "Memrise",
+          "nameZh": "Memrise",
+          "kind": "mobile_app",
+          "url": "https://www.memrise.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion",
+          "relation": "similar"
+        },
+        {
+          "name": "Te Whanake",
+          "nameZh": "毛利语参考资源",
+          "kind": "web_product",
+          "url": "https://tewhanake.maori.nz/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://www.akotahi.nz/"
+    },
+    {
+      "id": "sel673-05",
+      "route": "A",
+      "title": "Cornish Microlearning Web App",
+      "titleZh": "康沃尔语微学习 Web 应用",
+      "productForm": "web_app",
+      "category": "小语种学习与文化",
+      "market": "Cornish language market",
+      "routeScore": 68.0,
+      "routeRank": 5,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.58,
+      "opportunity": "证据：Learn Cornish与至少两个通用语言学习产品已提供Cornish学习或相关资源，说明存在可用供给与学习需求。推断：面向本地身份、移民与旅行场景的短时任务流可能形成更清晰的Web产品定位，需补充流量、活跃和付费数据。",
+      "improvements": [
+        "证据驱动的本地场景短课，按地点、家庭或工作任务组织词汇",
+        "加入方言/发音差异标注与可回放的真人音频",
+        "提供低带宽离线包和学习进度导出"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Learn Cornish",
+          "nameZh": "康沃尔语本地产品",
+          "kind": "web_product",
+          "url": "https://learncornish.org/en/app",
+          "store": null,
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Duolingo",
+          "nameZh": "多邻国",
+          "kind": "mobile_app",
+          "url": "https://www.duolingo.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.duolingo",
+          "relation": "similar"
+        },
+        {
+          "name": "Memrise",
+          "nameZh": "Memrise",
+          "kind": "mobile_app",
+          "url": "https://www.memrise.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion",
+          "relation": "similar"
+        },
+        {
+          "name": "Learn Cornish Online",
+          "nameZh": "康沃尔语参考资源",
+          "kind": "web_product",
+          "url": "https://learncornish.co.uk/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://learncornish.org/en/app"
+    },
+    {
+      "id": "sel673-06",
+      "route": "A",
+      "title": "Breton Microlearning Web App",
+      "titleZh": "布列塔尼语微学习 Web 应用",
+      "productForm": "web_app",
+      "category": "小语种学习与文化",
+      "market": "Breton language market",
+      "routeScore": 67.2,
+      "routeRank": 6,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.58,
+      "opportunity": "证据：Desketa与至少两个通用语言学习产品已提供Breton学习或相关资源，说明存在可用供给与学习需求。推断：面向本地身份、移民与旅行场景的短时任务流可能形成更清晰的Web产品定位，需补充流量、活跃和付费数据。",
+      "improvements": [
+        "证据驱动的本地场景短课，按地点、家庭或工作任务组织词汇",
+        "加入方言/发音差异标注与可回放的真人音频",
+        "提供低带宽离线包和学习进度导出"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Desketa",
+          "nameZh": "布列塔尼语本地产品",
+          "kind": "web_product",
+          "url": "https://www.fr.brezhoneg.bzh/UTB_FS/3/221-desketa-plateforme-gratuite-pour-apprendre-le-breton-en-ligne.htm",
+          "store": null,
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Duolingo",
+          "nameZh": "多邻国",
+          "kind": "mobile_app",
+          "url": "https://www.duolingo.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.duolingo",
+          "relation": "similar"
+        },
+        {
+          "name": "Memrise",
+          "nameZh": "Memrise",
+          "kind": "mobile_app",
+          "url": "https://www.memrise.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion",
+          "relation": "similar"
+        },
+        {
+          "name": "Ofis ar Brezhoneg",
+          "nameZh": "布列塔尼语参考资源",
+          "kind": "web_product",
+          "url": "https://www.fr.brezhoneg.bzh/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://www.fr.brezhoneg.bzh/UTB_FS/3/221-desketa-plateforme-gratuite-pour-apprendre-le-breton-en-ligne.htm"
+    },
+    {
+      "id": "sel673-07",
+      "route": "A",
+      "title": "Maltese Microlearning Web App",
+      "titleZh": "马耳他语微学习 Web 应用",
+      "productForm": "web_app",
+      "category": "小语种学习与文化",
+      "market": "Maltese language market",
+      "routeScore": 66.4,
+      "routeRank": 7,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.58,
+      "opportunity": "证据：Iċ-Ċavetta与至少两个通用语言学习产品已提供Maltese学习或相关资源，说明存在可用供给与学习需求。推断：面向本地身份、移民与旅行场景的短时任务流可能形成更清晰的Web产品定位，需补充流量、活跃和付费数据。",
+      "improvements": [
+        "证据驱动的本地场景短课，按地点、家庭或工作任务组织词汇",
+        "加入方言/发音差异标注与可回放的真人音频",
+        "提供低带宽离线包和学习进度导出"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Iċ-Ċavetta",
+          "nameZh": "马耳他语本地产品",
+          "kind": "web_product",
+          "url": "https://cavetta.org.mt/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Duolingo",
+          "nameZh": "多邻国",
+          "kind": "mobile_app",
+          "url": "https://www.duolingo.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.duolingo",
+          "relation": "similar"
+        },
+        {
+          "name": "Memrise",
+          "nameZh": "Memrise",
+          "kind": "mobile_app",
+          "url": "https://www.memrise.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion",
+          "relation": "similar"
+        },
+        {
+          "name": "University of Malta Maltese",
+          "nameZh": "马耳他语参考资源",
+          "kind": "web_product",
+          "url": "https://www.um.edu.mt/linguistics/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://cavetta.org.mt/"
+    },
+    {
+      "id": "sel673-08",
+      "route": "A",
+      "title": "Navajo Microlearning Web App",
+      "titleZh": "纳瓦霍语微学习 Web 应用",
+      "productForm": "web_app",
+      "category": "小语种学习与文化",
+      "market": "Navajo language market",
+      "routeScore": 65.6,
+      "routeRank": 8,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.58,
+      "opportunity": "证据：Diné Bizaad与至少两个通用语言学习产品已提供Navajo学习或相关资源，说明存在可用供给与学习需求。推断：面向本地身份、移民与旅行场景的短时任务流可能形成更清晰的Web产品定位，需补充流量、活跃和付费数据。",
+      "improvements": [
+        "证据驱动的本地场景短课，按地点、家庭或工作任务组织词汇",
+        "加入方言/发音差异标注与可回放的真人音频",
+        "提供低带宽离线包和学习进度导出"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Diné Bizaad",
+          "nameZh": "纳瓦霍语本地产品",
+          "kind": "web_product",
+          "url": "https://www.navajo-nsn.gov/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Duolingo",
+          "nameZh": "多邻国",
+          "kind": "mobile_app",
+          "url": "https://www.duolingo.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.duolingo",
+          "relation": "similar"
+        },
+        {
+          "name": "Memrise",
+          "nameZh": "Memrise",
+          "kind": "mobile_app",
+          "url": "https://www.memrise.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion",
+          "relation": "similar"
+        },
+        {
+          "name": "Mango Languages Cherokee/Navajo",
+          "nameZh": "纳瓦霍语参考资源",
+          "kind": "web_product",
+          "url": "https://mangolanguages.com/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://www.navajo-nsn.gov/"
+    },
+    {
+      "id": "sel673-09",
+      "route": "A",
+      "title": "Icelandic Microlearning Web App",
+      "titleZh": "冰岛语微学习 Web 应用",
+      "productForm": "web_app",
+      "category": "小语种学习与文化",
+      "market": "Icelandic language market",
+      "routeScore": 64.8,
+      "routeRank": 9,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.58,
+      "opportunity": "证据：Icelandic Online与至少两个通用语言学习产品已提供Icelandic学习或相关资源，说明存在可用供给与学习需求。推断：面向本地身份、移民与旅行场景的短时任务流可能形成更清晰的Web产品定位，需补充流量、活跃和付费数据。",
+      "improvements": [
+        "证据驱动的本地场景短课，按地点、家庭或工作任务组织词汇",
+        "加入方言/发音差异标注与可回放的真人音频",
+        "提供低带宽离线包和学习进度导出"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Icelandic Online",
+          "nameZh": "冰岛语本地产品",
+          "kind": "web_product",
+          "url": "https://icelandiconline.com/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Duolingo",
+          "nameZh": "多邻国",
+          "kind": "mobile_app",
+          "url": "https://www.duolingo.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.duolingo",
+          "relation": "similar"
+        },
+        {
+          "name": "Memrise",
+          "nameZh": "Memrise",
+          "kind": "mobile_app",
+          "url": "https://www.memrise.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion",
+          "relation": "similar"
+        },
+        {
+          "name": "The Árni Magnússon Institute",
+          "nameZh": "冰岛语参考资源",
+          "kind": "web_product",
+          "url": "https://arnastofnun.is/en",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://icelandiconline.com/"
+    },
+    {
+      "id": "sel673-10",
+      "route": "A",
+      "title": "Greenlandic Microlearning Web App",
+      "titleZh": "格陵兰语微学习 Web 应用",
+      "productForm": "web_app",
+      "category": "小语种学习与文化",
+      "market": "Greenlandic language market",
+      "routeScore": 64.0,
+      "routeRank": 10,
+      "decision": "ROUTE_WATCH",
+      "dataCompleteness": 0.58,
+      "opportunity": "证据：Oqaasileriffik与至少两个通用语言学习产品已提供Greenlandic学习或相关资源，说明存在可用供给与学习需求。推断：面向本地身份、移民与旅行场景的短时任务流可能形成更清晰的Web产品定位，需补充流量、活跃和付费数据。",
+      "improvements": [
+        "证据驱动的本地场景短课，按地点、家庭或工作任务组织词汇",
+        "加入方言/发音差异标注与可回放的真人音频",
+        "提供低带宽离线包和学习进度导出"
+      ],
+      "packageStatus": "BLOCKED",
+      "packageId": null,
+      "packageUrl": null,
+      "packageSha256": null,
+      "references": [
+        {
+          "name": "Oqaasileriffik",
+          "nameZh": "格陵兰语本地产品",
+          "kind": "web_product",
+          "url": "https://oqaasileriffik.gl/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "competitor"
+        },
+        {
+          "name": "Duolingo",
+          "nameZh": "多邻国",
+          "kind": "mobile_app",
+          "url": "https://www.duolingo.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.duolingo",
+          "relation": "similar"
+        },
+        {
+          "name": "Memrise",
+          "nameZh": "Memrise",
+          "kind": "mobile_app",
+          "url": "https://www.memrise.com/",
+          "store": "google_play",
+          "storeUrl": "https://play.google.com/store/apps/details?id=com.memrise.android.memrisecompanion",
+          "relation": "similar"
+        },
+        {
+          "name": "Kalaallisut dictionary",
+          "nameZh": "格陵兰语参考资源",
+          "kind": "web_product",
+          "url": "https://ordbog.gl/",
+          "store": null,
+          "storeUrl": null,
+          "relation": "substitute"
+        }
+      ],
+      "iconUrl": null,
+      "iconSource": "competitor",
+      "iconSourceUrl": "https://oqaasileriffik.gl/"
+    }
+  ]
+}
